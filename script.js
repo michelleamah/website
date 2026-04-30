@@ -6,7 +6,7 @@
    ════════════════════════════════════════════════ */
 
 // ─── EDIT THIS ─── put your github username here so projects auto-load ♡
-const GITHUB_USERNAME = 'YOUR-USERNAME';
+const GITHUB_USERNAME = 'michelleamah';
 
 // how many projects to show (sorted by most recently updated)
 const MAX_PROJECTS = 6;

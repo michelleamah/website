@@ -99,10 +99,9 @@ img { max-width: 100%; display: block; }
   50%     { transform: translateY(-25px) rotate(15deg); opacity: 0.8; }
 }
 
-/* ───── top controls ───── */
+/* ───── top controls (inside nav, no longer fixed) ───── */
 .top-controls {
-  position: fixed; top: 1.2rem; right: 1.2rem;
-  display: flex; gap: 0.6rem; z-index: 100;
+  display: flex; gap: 0.6rem; flex-shrink: 0;
 }
 .ctrl-btn {
   width: 44px; height: 44px;
