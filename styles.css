@@ -124,6 +124,18 @@ img { max-width: 100%; display: block; }
 .ctrl-btn.playing { background: var(--c1); color: white; }
 .ctrl-btn i { width: 18px; height: 18px; }
 
+/* custom SVG icons — sized to match lucide, turn white when parent is hovered */
+.icon-svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: filter 0.2s;
+}
+.socials a:hover .icon-svg,
+.ctrl-btn:hover .icon-svg {
+  filter: brightness(0) invert(1);
+}
+
 /* ───── nav ───── */
 .nav {
   position: sticky; top: 0; z-index: 50;
