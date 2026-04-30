@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>♡ michelle mah ♡</title>
+  <meta name="description" content="Michelle Mah — incoming Master's student at Carnegie Mellon (Silicon Valley). Portfolio, projects & experience." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩🏻‍💻</text></svg>" />
+
+  <!-- fonts: cute serif for headings + soft sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Quicksand:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- icon library (free, no key needed) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ───── floating decorations (stars/sparkles) ───── -->
+  <div class="sparkles" aria-hidden="true">
+    <span>✦</span><span>✿</span><span>♡</span><span>✦</span><span>❀</span>
+    <span>★</span><span>♡</span><span>✿</span><span>✦</span><span>❀</span>
+  </div>
+
+  <!-- drop your music file in /assets/ and update the src below ♥ -->
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ───── nav ───── -->
+  <nav class="nav">
+    <a href="#home" class="logo">m.m ♡</a>
+    <ul>
+      <li><a href="#about">about</a></li>
+      <li><a href="#education">school</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- floating controls — fixed bottom-right, never touch the nav links -->
+  <div class="top-controls">
+    <button id="music-toggle" class="ctrl-btn" aria-label="Play music" title="play music ♪">
+      <i data-lucide="music-2"></i>
+    </button>
+    <button id="theme-toggle" class="ctrl-btn" aria-label="Toggle dark mode" title="toggle theme">
+      <i data-lucide="moon"></i>
+    </button>
+  </div>
+
+  <!-- ───── hero ───── -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="hello">hi hi! welcome to my corner of the internet ✿</p>
+      <h1>
+        <span class="c1">michelle</span>
+        <span class="c2">mah</span>
+        <span class="sparkle">✦</span>
+      </h1>
+      <p class="tagline">
+        <span class="c3">incoming m.s.</span> in software management
+        <span class="c4">@ carnegie mellon</span> · silicon valley ⋆｡˚
+      </p>
+      <p class="sub">aspiring tech girlie ⋆ building soft, thoughtful things on the internet</p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">see my projects ♡</a>
+        <a href="assets/resume.pdf" class="btn btn-ghost" download>
+          <i data-lucide="download"></i> resume
+        </a>
+      </div>
+
+      <!-- socials -->
+      <div class="socials">
+        <!-- ✿ edit these links to point to your actual profiles ✿ -->
+        <a href="https://github.com/michelleamah" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:motmjz@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="https://instagram.com/YOUR-USERNAME" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="assets/resume.pdf" download aria-label="Resume"><i data-lucide="file-text"></i></a>
+      </div>
+    </div>
+
+    <!-- pretty floating illustration (replace with your own gif/photo!) -->
+    <div class="hero-art">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="photo-frame">
+        <!-- swap this src for your own photo or a cute gif ♡ -->
+        <img src="https://api.dicebear.com/9.x/thumbs/svg?seed=michelle&backgroundColor=fce7f3,e0e7ff,d1fae5&radius=50" alt="michelle" />
+        <span class="photo-tag">♡ hi! ♡</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── about ───── -->
+  <section id="about" class="section">
+    <h2><span class="c1">about</span> <span class="c2">me</span> ✿</h2>
+    <div class="about-grid">
+      <div class="card about-card">
+        <p>
+          hello! i'm <b>michelle</b> ♡ a mid-20s tech girlie based in the bay area soon-ish.
+          i love thoughtful design, soft aesthetics, and building things people actually enjoy using.
+        </p>
+        <p>
+          i'm starting my <b>m.s. in software management</b> at <b>carnegie mellon (silicon valley)</b>
+          — focusing on the intersection of engineering, product, and people.
+        </p>
+        <p>
+          when i'm not coding you'll find me with sanrio sticker hauls, miffy plushies,
+          studio ghibli marathons, and twinkle twinkle anything ｡⋆୨୧˚
+        </p>
+      </div>
+
+      <div class="card facts">
+        <h3>currently ✦</h3>
+        <ul class="facts-list">
+          <li><i data-lucide="graduation-cap"></i> incoming MSSM @ CMU SV</li>
+          <li><i data-lucide="map-pin"></i> bay area, california</li>
+          <li><i data-lucide="sparkles"></i> learning + building daily</li>
+          <li><i data-lucide="coffee"></i> matcha latte enthusiast</li>
+          <li><i data-lucide="heart"></i> open to new grad / intern roles</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── education ───── -->
+  <section id="education" class="section">
+    <h2><span class="c3">education</span> <span class="c4">♡</span></h2>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="card">
+          <div class="t-head">
+            <h3>Carnegie Mellon University</h3>
+            <span class="t-date">aug 2026 – dec 2027</span>
+          </div>
+          <p class="t-sub">M.S. in Software Management · Silicon Valley campus ✦</p>
+          <p>incoming master's student — focusing on software engineering leadership, product, and tech management.</p>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="card">
+          <div class="t-head">
+            <h3>BrainStation</h3>
+            <span class="t-date">mar 2024 – jun 2024</span>
+          </div>
+          <p class="t-sub">Software Engineering Diploma ✦</p>
+          <p>intensive bootcamp covering full-stack web development — html, css, javascript, react, node.js, and more.</p>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="card">
+          <div class="t-head">
+            <h3>Queen's University</h3>
+            <span class="t-date">sep 2019 – apr 2023</span>
+          </div>
+          <p class="t-sub">Bachelor of Commerce · Kingston, ON ✦</p>
+          <p>studied business, strategy, and management at one of canada's top commerce programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── experience ───── -->
+  <section id="experience" class="section">
+    <h2><span class="c2">experience</span> <span class="c1">✦</span></h2>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="card">
+          <div class="t-head">
+            <h3>Solutions Engineer <span class="muted">@ Organimi</span></h3>
+            <span class="t-date">mar 2026 – present</span>
+          </div>
+          <ul>
+            <li>add a bullet about your key responsibilities or impact ♡</li>
+            <li>add another bullet here</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="card">
+          <div class="t-head">
+            <h3>GTM <span class="muted">@ Salesforce</span></h3>
+            <span class="t-date">jun 2024 – mar 2026</span>
+          </div>
+          <ul>
+            <li>add a bullet about your key responsibilities or impact ♡</li>
+            <li>add another bullet here</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── projects (auto-fetched from GitHub) ───── -->
+  <section id="projects" class="section">
+    <h2><span class="c4">projects</span> <span class="c3">✿</span></h2>
+    <p class="section-sub">auto-pulled from my github ♡ <a href="https://github.com/michelleamah" target="_blank" rel="noopener">see all →</a></p>
+    <div id="projects-grid" class="projects-grid">
+      <!-- filled in by script.js -->
+      <div class="card placeholder">loading projects ✦…</div>
+    </div>
+  </section>
+
+  <!-- ───── skills ───── -->
+  <section id="skills" class="section">
+    <h2><span class="c1">skills</span> <span class="c2">&amp;</span> <span class="c3">tools</span> ♡</h2>
+    <div class="skills">
+      <span class="chip">JavaScript</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">React</span>
+      <span class="chip">Next.js</span>
+      <span class="chip">Python</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">SQL</span>
+      <span class="chip">Figma</span>
+      <span class="chip">Git</span>
+      <span class="chip">HTML / CSS</span>
+      <span class="chip">Tailwind</span>
+      <span class="chip">Notion</span>
+      <!-- add or remove freely ♡ -->
+    </div>
+  </section>
+
+  <!-- ───── contact ───── -->
+  <section id="contact" class="section contact">
+    <h2><span class="c2">say</span> <span class="c1">hi</span> ✿</h2>
+    <p>i'd love to chat about roles, collabs, or just trade ghibli movie recs ♡</p>
+    <div class="contact-buttons">
+      <a href="mailto:motmjz@gmail.com" class="btn btn-primary"><i data-lucide="mail"></i> email me</a>
+      <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener" class="btn btn-ghost"><i data-lucide="linkedin"></i> linkedin</a>
+      <a href="https://github.com/michelleamah" target="_blank" rel="noopener" class="btn btn-ghost"><i data-lucide="github"></i> github</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>made with ♡ &amp; lots of matcha · © <span id="year"></span> michelle mah</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
