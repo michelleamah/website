@@ -40,16 +40,17 @@
       <li><a href="#skills">skills</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
-    <!-- controls live inside the nav so they never overlap links -->
-    <div class="top-controls">
-      <button id="music-toggle" class="ctrl-btn" aria-label="Play music" title="play music ♪">
-        <i data-lucide="music-2"></i>
-      </button>
-      <button id="theme-toggle" class="ctrl-btn" aria-label="Toggle dark mode" title="toggle theme">
-        <i data-lucide="moon"></i>
-      </button>
-    </div>
   </nav>
+
+  <!-- floating controls — fixed bottom-right, never touch the nav links -->
+  <div class="top-controls">
+    <button id="music-toggle" class="ctrl-btn" aria-label="Play music" title="play music ♪">
+      <i data-lucide="music-2"></i>
+    </button>
+    <button id="theme-toggle" class="ctrl-btn" aria-label="Toggle dark mode" title="toggle theme">
+      <i data-lucide="moon"></i>
+    </button>
+  </div>
 
   <!-- ───── hero ───── -->
   <section id="home" class="hero">
