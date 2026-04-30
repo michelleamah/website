@@ -99,9 +99,14 @@ img { max-width: 100%; display: block; }
   50%     { transform: translateY(-25px) rotate(15deg); opacity: 0.8; }
 }
 
-/* ───── top controls (inside nav, no longer fixed) ───── */
+/* ───── floating controls (fixed bottom-right) ───── */
 .top-controls {
-  display: flex; gap: 0.6rem; flex-shrink: 0;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  z-index: 100;
 }
 .ctrl-btn {
   width: 44px; height: 44px;
@@ -122,10 +127,7 @@ img { max-width: 100%; display: block; }
 /* ───── nav ───── */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1rem;
+  display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 2.5rem;
   background: var(--card);
   backdrop-filter: blur(14px);
@@ -138,10 +140,8 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 .nav ul {
-  display: flex; gap: 1.2rem;
+  display: flex; gap: 1.5rem;
   list-style: none;
-  justify-content: center;
-  flex-wrap: nowrap;
 }
 .nav ul a {
   color: var(--text);
@@ -463,11 +463,8 @@ footer {
 
 /* ───── responsive ───── */
 @media (max-width: 800px) {
-  /* row 1: logo + controls; row 2: links centred */
-  .nav { grid-template-columns: 1fr auto; grid-template-rows: auto auto; padding: 0.8rem 1.2rem; }
-  .nav .logo { grid-column: 1; grid-row: 1; }
-  .nav .top-controls { grid-column: 2; grid-row: 1; }
-  .nav ul { grid-column: 1 / -1; grid-row: 2; gap: 0.7rem; flex-wrap: wrap; justify-content: center; }
+  .nav { padding: 0.8rem 1.2rem; flex-wrap: wrap; gap: 0.4rem 0; }
+  .nav ul { width: 100%; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
   .nav ul a { font-size: 0.85rem; }
   .hero {
     grid-template-columns: 1fr;
