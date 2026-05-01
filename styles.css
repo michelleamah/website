@@ -246,7 +246,17 @@ img { max-width: 100%; display: block; }
   color: var(--text);
   border: 1.5px solid var(--card-edge);
 }
-.btn-ghost:hover { background: var(--bg-soft); opacity: 1; }
+.btn-ghost:hover {
+  background: var(--bg-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  opacity: 1;
+}
+[data-theme="dark"] .btn-ghost:hover {
+  background: color-mix(in srgb, var(--c1) 18%, var(--card));
+  border-color: var(--c1);
+  color: var(--c1);
+}
 
 /* socials */
 .socials { display: flex; gap: 0.7rem; }
