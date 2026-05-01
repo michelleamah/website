@@ -120,10 +120,12 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--card-edge);
 }
 .nav .logo {
-  font-family: 'Caveat', cursive;
-  font-size: 1.8rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
   color: var(--c1);
-  font-weight: 700;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.02em;
 }
 .nav ul {
   display: flex; gap: 1.5rem;
@@ -254,24 +256,15 @@ img { max-width: 100%; display: block; }
   position: relative; z-index: 2;
   width: 280px; height: 280px;
   border-radius: 50%;
-  background: var(--card);
   border: 4px solid white;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   animation: bob 5s ease-in-out infinite;
-}
-.photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 75% 20%; }
-.photo-tag {
-  position: absolute;
-  bottom: -8px; right: -8px;
-  background: var(--c1);
-  color: white;
-  font-family: 'Caveat', cursive;
-  font-size: 1.4rem;
-  padding: 0.2rem 1rem;
-  border-radius: 999px;
-  border: 3px solid var(--bg);
-  transform: rotate(-8deg);
+  /* background-image gives precise control over zoom + position */
+  background-image: url('assets/profilepic.jpeg');
+  background-repeat: no-repeat;
+  background-size: 170%;          /* zoom level — lower = more of the image shown */
+  background-position: 72% 28%;   /* horizontal % / vertical % — adjust as needed */
 }
 @keyframes bob {
   0%,100% { transform: translateY(0); }
@@ -460,7 +453,7 @@ footer {
   }
   .socials { justify-content: center; }
   .hero-cta { justify-content: center; }
-  .photo-frame { width: 220px; height: 220px; }
+  .photo-frame { width: 220px; height: 220px; background-size: 170%; }
   .about-grid { grid-template-columns: 1fr; }
   .section { padding: 3rem 1.5rem; }
   .t-head { flex-direction: column; align-items: flex-start; }
