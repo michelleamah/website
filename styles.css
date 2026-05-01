@@ -375,7 +375,7 @@ img { max-width: 100%; display: block; }
 }
 .facts-list li:last-child { border-bottom: none; }
 .facts-list i { width: 18px; height: 18px; color: var(--c1); flex-shrink: 0; }
-.facts-list i svg { width: 18px; height: 18px; }
+.facts-list i svg { width: 18px; height: 18px; stroke-width: 2.5; }
 
 /* timeline */
 .timeline {
