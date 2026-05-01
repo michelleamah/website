@@ -315,9 +315,9 @@ img { max-width: 100%; display: block; }
 .photo-frame img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: 92% 38%;
+  object-position: 72% 30%;
   transform: scale(1.5);
-  transform-origin: 92% 38%;
+  transform-origin: center center;
 }
 @keyframes bob {
   0%,100% { transform: translateY(0); }
