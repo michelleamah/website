@@ -36,11 +36,6 @@
     </ul>
   </nav>
 
-  <!-- song label — appears when music is playing -->
-  <div id="song-label" class="song-label" aria-hidden="true">
-    <i data-lucide="music-2"></i> music box song — stardew valley ost
-  </div>
-
   <!-- floating controls — fixed bottom-right, never touch the nav links -->
   <div class="top-controls">
     <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener" class="ctrl-btn" aria-label="LinkedIn" title="linkedin ♡">
@@ -49,9 +44,15 @@
     <a href="https://github.com/michelleamah" target="_blank" rel="noopener" class="ctrl-btn" aria-label="GitHub" title="github ♡">
       <img src="assets/github-sky.svg" class="icon-svg" alt="GitHub" />
     </a>
-    <button id="music-toggle" class="ctrl-btn" aria-label="Play music" title="play music ♪">
-      <i data-lucide="music-2"></i>
-    </button>
+    <!-- music button wrapped so song label floats directly above it -->
+    <div class="music-wrap">
+      <div id="song-label" class="song-label" aria-hidden="true">
+        <i data-lucide="music-2"></i> music box song — stardew valley ost
+      </div>
+      <button id="music-toggle" class="ctrl-btn" aria-label="Play music" title="play music ♪">
+        <i data-lucide="music-2"></i>
+      </button>
+    </div>
     <button id="theme-toggle" class="ctrl-btn" aria-label="Toggle dark mode" title="toggle theme">
       <i data-lucide="moon"></i>
     </button>

@@ -74,12 +74,16 @@ img { max-width: 100%; display: block; }
 
 
 /* ───── floating controls (fixed bottom-right) ───── */
-/* song label — floats above controls when music plays */
+/* music wrap — gives the label an anchor to sit above the button */
+.music-wrap { position: relative; }
+
+/* song label — floats above the music button when playing */
 .song-label {
-  position: fixed;
-  bottom: 5.2rem;
-  right: 1.5rem;
   display: none;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
   align-items: center;
   gap: 0.4rem;
   background: var(--card);
@@ -93,15 +97,17 @@ img { max-width: 100%; display: block; }
   color: var(--c3);
   white-space: nowrap;
   box-shadow: var(--shadow);
-  z-index: 100;
-  animation: fadeSlideUp 0.3s ease;
+  z-index: 101;
 }
 .song-label i { width: 14px; height: 14px; color: var(--c3); flex-shrink: 0; }
-.song-label.visible { display: flex; }
+.song-label.visible {
+  display: flex;
+  animation: fadeSlideUp 0.3s ease;
+}
 
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateX(-50%) translateY(6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 .top-controls {
@@ -293,9 +299,9 @@ img { max-width: 100%; display: block; }
 .photo-frame img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: 80% 42%;
-  transform: scale(1.4);
-  transform-origin: 80% 42%;
+  object-position: 88% 42%;
+  transform: scale(1.5);
+  transform-origin: 88% 42%;
 }
 @keyframes bob {
   0%,100% { transform: translateY(0); }
