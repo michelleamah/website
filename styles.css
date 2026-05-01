@@ -163,6 +163,7 @@ img { max-width: 100%; display: block; }
   font-style: normal;
 }
 .nav .logo .c2 { color: var(--c2); font-style: normal; }
+.nav .logo .logo-mah { font-style: italic; }
 .nav ul {
   display: flex; gap: 1.5rem;
   list-style: none;

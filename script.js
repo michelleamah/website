@@ -44,8 +44,8 @@ themeToggle.addEventListener('click', () => {
 
 function applyTheme(mode) {
   root.dataset.theme = mode;
-  const icon = themeToggle.querySelector('i');
-  icon.setAttribute('data-lucide', mode === 'dark' ? 'sun' : 'moon');
+  const icon = themeToggle.querySelector('[data-lucide]');
+  if (icon) icon.setAttribute('data-lucide', mode === 'dark' ? 'sun' : 'moon');
   if (window.lucide) lucide.createIcons();
 }
 
@@ -59,17 +59,18 @@ musicBtn.addEventListener('click', () => {
   if (audio.paused) {
     audio.play().then(() => {
       musicBtn.classList.add('playing');
-      musicBtn.querySelector('i').setAttribute('data-lucide', 'pause');
+      const icon = musicBtn.querySelector('[data-lucide]');
+      if (icon) icon.setAttribute('data-lucide', 'pause');
       songLabel.classList.add('visible');
       lucide.createIcons();
     }).catch(() => {
-      // no music file yet — give a gentle hint
       musicBtn.title = 'add a file at assets/music.mp3 to enable ♪';
     });
   } else {
     audio.pause();
     musicBtn.classList.remove('playing');
-    musicBtn.querySelector('i').setAttribute('data-lucide', 'music-2');
+    const icon = musicBtn.querySelector('[data-lucide]');
+    if (icon) icon.setAttribute('data-lucide', 'music-2');
     songLabel.classList.remove('visible');
     lucide.createIcons();
   }
