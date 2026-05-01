@@ -8,6 +8,16 @@
 // ─── EDIT THIS ─── put your github username here so projects auto-load ♡
 const GITHUB_USERNAME = 'michelleamah';
 
+// real descriptions for each repo (keyed by repo name, case-insensitive)
+const PROJECT_DESCRIPTIONS = {
+  'brainflix':      'a YouTube-like video streaming platform built during BrainStation ✿',
+  'website':        'my personal portfolio website — the one you\'re on right now ♡',
+  'finance-tracker':'a personal finance tracker to manage and visualise spending',
+  'job-tracker':    'a job application tracker to stay on top of your search',
+  'bookmate':       'a Tinder-style book matching app — swipe to find your next read (BrainStation) ✿',
+  'bandsite':       'a promotional website built for a fictional band (BrainStation)',
+};
+
 // how many projects to show (sorted by most recently updated)
 const MAX_PROJECTS = 6;
 
@@ -88,7 +98,7 @@ async function loadGitHubProjects() {
     grid.innerHTML = filtered.map(repo => `
       <a class="card project-card" href="${repo.html_url}" target="_blank" rel="noopener">
         <h3>${escapeHtml(repo.name)}</h3>
-        <p>${escapeHtml(repo.description || 'a little something i made ✿')}</p>
+        <p>${escapeHtml(PROJECT_DESCRIPTIONS[repo.name.toLowerCase()] || repo.description || 'a little something i made ✿')}</p>
         <div class="project-meta">
           ${repo.language ? `<span>● ${escapeHtml(repo.language)}</span>` : ''}
           <span>★ ${repo.stargazers_count}</span>
