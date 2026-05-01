@@ -124,7 +124,6 @@ img { max-width: 100%; display: block; }
   font-size: 1.5rem;
   color: var(--c1);
   font-weight: 600;
-  font-style: italic;
   letter-spacing: -0.02em;
 }
 .nav ul {
@@ -260,11 +259,11 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   animation: bob 5s ease-in-out infinite;
-  /* background-image gives precise control over zoom + position */
-  background-image: url('assets/profilepic.jpeg');
-  background-repeat: no-repeat;
-  background-size: 170%;          /* zoom level — lower = more of the image shown */
-  background-position: 72% 28%;   /* horizontal % / vertical % — adjust as needed */
+}
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 72% 28%;
 }
 @keyframes bob {
   0%,100% { transform: translateY(0); }
@@ -453,7 +452,7 @@ footer {
   }
   .socials { justify-content: center; }
   .hero-cta { justify-content: center; }
-  .photo-frame { width: 220px; height: 220px; background-size: 170%; }
+  .photo-frame { width: 220px; height: 220px; }
   .about-grid { grid-template-columns: 1fr; }
   .section { padding: 3rem 1.5rem; }
   .t-head { flex-direction: column; align-items: flex-start; }
