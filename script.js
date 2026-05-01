@@ -99,18 +99,29 @@ async function loadGitHubProjects() {
       return;
     }
 
-    grid.innerHTML = filtered.map(repo => `
-      <a class="card project-card" href="${repo.html_url}" target="_blank" rel="noopener">
-        <h3>${escapeHtml(repo.name)}</h3>
-        <p>${escapeHtml(PROJECT_DESCRIPTIONS[repo.name.toLowerCase()] || repo.description || 'a little something i made ✿')}</p>
-        <div class="project-meta">
-          ${repo.language ? `<span>● ${escapeHtml(repo.language)}</span>` : ''}
-          <span>★ ${repo.stargazers_count}</span>
-          <span>⑂ ${repo.forks_count}</span>
-        </div>
-        <span class="project-link">view on github →</span>
-      </a>
-    `).join('');
+    // fetch all languages for each repo in parallel
+    const languageResults = await Promise.all(
+      filtered.map(repo =>
+        fetch(repo.languages_url)
+          .then(r => r.ok ? r.json() : {})
+          .catch(() => ({}))
+      )
+    );
+
+    grid.innerHTML = filtered.map((repo, i) => {
+      const langs = Object.keys(languageResults[i]);
+      const langHtml = langs.length
+        ? langs.map(l => `<span class="lang-chip">${escapeHtml(l)}</span>`).join('')
+        : '';
+      return `
+        <a class="card project-card" href="${repo.html_url}" target="_blank" rel="noopener">
+          <h3>${escapeHtml(repo.name)}</h3>
+          <p>${escapeHtml(PROJECT_DESCRIPTIONS[repo.name.toLowerCase()] || repo.description || 'a little something i made ✿')}</p>
+          ${langHtml ? `<div class="lang-chips">${langHtml}</div>` : ''}
+          <span class="project-link">view on github →</span>
+        </a>
+      `;
+    }).join('');
   } catch (e) {
     grid.innerHTML = `
       <div class="card placeholder">

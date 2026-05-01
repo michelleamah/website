@@ -451,6 +451,18 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.8rem;
 }
 .project-meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+.lang-chips {
+  display: flex; flex-wrap: wrap; gap: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+.lang-chip {
+  font-size: 0.75rem; font-family: 'Quicksand', sans-serif; font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--c3);
+  border: 1px solid var(--card-edge);
+}
 .project-link {
   color: var(--c2); font-weight: 600; font-size: 0.9rem;
   display: inline-flex; align-items: center; gap: 0.3rem;
