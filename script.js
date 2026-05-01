@@ -52,6 +52,7 @@ function applyTheme(mode) {
 // ───── music toggle ─────
 const musicBtn = document.getElementById('music-toggle');
 const audio = document.getElementById('bg-music');
+const songLabel = document.getElementById('song-label');
 audio.volume = 0.3;
 
 musicBtn.addEventListener('click', () => {
@@ -59,6 +60,7 @@ musicBtn.addEventListener('click', () => {
     audio.play().then(() => {
       musicBtn.classList.add('playing');
       musicBtn.querySelector('i').setAttribute('data-lucide', 'pause');
+      songLabel.classList.add('visible');
       lucide.createIcons();
     }).catch(() => {
       // no music file yet — give a gentle hint
@@ -68,6 +70,7 @@ musicBtn.addEventListener('click', () => {
     audio.pause();
     musicBtn.classList.remove('playing');
     musicBtn.querySelector('i').setAttribute('data-lucide', 'music-2');
+    songLabel.classList.remove('visible');
     lucide.createIcons();
   }
 });
