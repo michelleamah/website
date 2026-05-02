@@ -10,13 +10,18 @@ const GITHUB_USERNAME = 'michelleamah';
 
 // real descriptions for each repo (keyed by repo name, case-insensitive)
 const PROJECT_DESCRIPTIONS = {
-  'brainflix':      'a YouTube-like video streaming platform built during BrainStation ✿',
-  'website':        'my personal portfolio website — the one you\'re on right now ♡',
-  'finance-tracker':'a personal finance tracker to manage and visualise spending',
-  'job-tracker':    'a job application tracker to stay on top of your search',
-  'bookmate':       'a Tinder-style book matching app — swipe to find your next read ✿ (BrainStation capstone project)',
-  'bandsite':       'a promotional website built for a fictional band (BrainStation)',
-  'salesforce-api': 'a web app integrating the Salesforce REST API — OAuth 2.0 authentication, live CRM data (contacts, accounts, opportunities), and a filterable dashboard UI 🚧',
+  'brainflix':            'a YouTube-like video streaming platform built during BrainStation ✿',
+  'website':              'my personal portfolio website — the one you\'re on right now ♡',
+  'finance-tracker':      'a personal finance tracker to manage and visualise spending',
+  'job-tracker':          'a job application tracker to stay on top of your search',
+  'bookmate':             'a Tinder-style book matching app — swipe to find your next read ✿ (BrainStation capstone project)',
+  'bandsite':             'a promotional website built for a fictional band (BrainStation)',
+  'salesforce-dashboard': 'a web app integrating the Salesforce REST API — OAuth 2.0 authentication, live CRM data (contacts, accounts, opportunities), and a filterable dashboard UI 🚧',
+};
+
+// fallback languages for repos that are new/empty (no code pushed yet)
+const PROJECT_LANGUAGES_FALLBACK = {
+  'salesforce-dashboard': ['JavaScript', 'React', 'CSS'],
 };
 
 // how many projects to show (sorted by most recently updated)
@@ -110,10 +115,11 @@ async function loadGitHubProjects() {
     );
 
     grid.innerHTML = filtered.map((repo, i) => {
-      const langs = Object.keys(languageResults[i]);
-      const langHtml = langs.length
-        ? langs.map(l => `<span class="lang-chip">${escapeHtml(l)}</span>`).join('')
-        : '';
+      const apiLangs = Object.keys(languageResults[i]);
+      const langs = apiLangs.length
+        ? apiLangs
+        : (PROJECT_LANGUAGES_FALLBACK[repo.name.toLowerCase()] || []);
+      const langHtml = langs.map(l => `<span class="lang-chip">${escapeHtml(l)}</span>`).join('');
       return `
         <div class="card project-card">
           <h3>${escapeHtml(repo.name)}</h3>
