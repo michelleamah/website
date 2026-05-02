@@ -16,7 +16,7 @@ const PROJECT_DESCRIPTIONS = {
   'job-tracker':          'a job application tracker to stay on top of your search',
   'bookmate':             'a Tinder-style book matching app — swipe to find your next read ✿ (BrainStation capstone project)',
   'bandsite':             'a promotional website built for a fictional band (BrainStation)',
-  'salesforce-dashboard': 'a web app integrating the Salesforce REST API — OAuth 2.0 authentication, live CRM data (contacts, accounts, opportunities), and a filterable dashboard UI 🚧',
+  'salesforce-dashboard': 'a Salesforce REST API integration — OAuth 2.0 auth, live CRM data, and a filterable dashboard UI 🚧',
 };
 
 // fallback languages for repos that are new/empty (no code pushed yet)
