@@ -14,8 +14,9 @@ const PROJECT_DESCRIPTIONS = {
   'website':        'my personal portfolio website — the one you\'re on right now ♡',
   'finance-tracker':'a personal finance tracker to manage and visualise spending',
   'job-tracker':    'a job application tracker to stay on top of your search',
-  'bookmate':       'a Tinder-style book matching app — swipe to find your next read (BrainStation) ✿',
+  'bookmate':       'a Tinder-style book matching app — swipe to find your next read ✿ (BrainStation capstone project)',
   'bandsite':       'a promotional website built for a fictional band (BrainStation)',
+  'salesforce-api': 'a web app integrating the Salesforce REST API — OAuth 2.0 authentication, live CRM data (contacts, accounts, opportunities), and a filterable dashboard UI 🚧',
 };
 
 // how many projects to show (sorted by most recently updated)
@@ -114,12 +115,11 @@ async function loadGitHubProjects() {
         ? langs.map(l => `<span class="lang-chip">${escapeHtml(l)}</span>`).join('')
         : '';
       return `
-        <a class="card project-card" href="${repo.html_url}" target="_blank" rel="noopener">
+        <div class="card project-card">
           <h3>${escapeHtml(repo.name)}</h3>
           <p>${escapeHtml(PROJECT_DESCRIPTIONS[repo.name.toLowerCase()] || repo.description || 'a little something i made ✿')}</p>
           ${langHtml ? `<div class="lang-chips">${langHtml}</div>` : ''}
-          <span class="project-link">view on github →</span>
-        </a>
+        </div>
       `;
     }).join('');
   } catch (e) {

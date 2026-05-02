@@ -428,6 +428,7 @@ img { max-width: 100%; display: block; }
 .project-card {
   display: flex; flex-direction: column;
   position: relative; overflow: hidden;
+  cursor: default;
 }
 .project-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0;
