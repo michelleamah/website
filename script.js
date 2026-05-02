@@ -12,8 +12,8 @@ const GITHUB_USERNAME = 'michelleamah';
 const PROJECT_DESCRIPTIONS = {
   'brainflix':            'a YouTube-like video streaming platform built during BrainStation ✿',
   'website':              'my personal portfolio website — the one you\'re on right now ♡',
-  'finance-tracker':      'a personal finance tracker to manage and visualise spending',
-  'job-tracker':          'a job application tracker to stay on top of your search',
+  'penny':                'a personal finance tracker to manage and visualise spending',
+  'launchpad':            'a job application tracker to stay on top of your search',
   'bookmate':             'a Tinder-style book matching app — swipe to find your next read ✿ (BrainStation capstone project)',
   'bandsite':             'a promotional website built for a fictional band (BrainStation)',
   'salesforce-dashboard': 'a Salesforce REST API integration — OAuth 2.0 auth, live CRM data, and a filterable dashboard UI 🚧',
