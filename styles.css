@@ -98,7 +98,7 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
   z-index: 200;
 }
-.song-label i { width: 14px; height: 14px; color: var(--c3); flex-shrink: 0; }
+.song-label .lucide { width: 14px; height: 14px; color: var(--c3); flex-shrink: 0; }
 .song-label.visible {
   display: flex;
   animation: fadeSlideUp 0.3s ease;
@@ -131,7 +131,7 @@ img { max-width: 100%; display: block; }
 }
 .ctrl-btn:hover { transform: translateY(-2px) scale(1.05); background: var(--c1); border-color: var(--c1); }
 .ctrl-btn.playing { background: var(--c1); color: white; }
-.ctrl-btn i, .ctrl-btn svg { width: 18px; height: 18px; }
+.ctrl-btn i, .ctrl-btn svg, .ctrl-btn .icon { width: 18px; height: 18px; display: block; }
 
 
 /* ───── nav ───── */
@@ -223,7 +223,7 @@ img { max-width: 100%; display: block; }
   transition: all 0.25s ease;
   border: none;
 }
-.btn i, .btn svg { width: 16px; height: 16px; }
+.btn i, .btn svg, .btn .icon { width: 16px; height: 16px; display: block; }
 .btn-primary {
   background: linear-gradient(135deg, var(--c1), var(--c3));
   color: white;
@@ -268,7 +268,7 @@ img { max-width: 100%; display: block; }
   border-color: var(--c1);
   opacity: 1;
 }
-.socials i, .socials svg { width: 18px; height: 18px; }
+.socials i, .socials svg, .socials .icon { width: 18px; height: 18px; display: block; }
 
 /* hero art */
 .hero-art {
@@ -363,8 +363,7 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px dashed var(--card-edge);
 }
 .facts-list li:last-child { border-bottom: none; }
-.facts-list i { width: 18px; height: 18px; color: var(--c1); flex-shrink: 0; }
-.facts-list i svg { width: 18px; height: 18px; stroke-width: 2.5; }
+.facts-list .lucide { width: 18px; height: 18px; color: var(--c1); flex-shrink: 0; stroke-width: 2.5; }
 
 /* timeline */
 .timeline {

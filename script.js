@@ -10,13 +10,13 @@ const GITHUB_USERNAME = 'michelleamah';
 
 // real descriptions for each repo (keyed by repo name, case-insensitive)
 const PROJECT_DESCRIPTIONS = {
-  'brainflix':            'a YouTube-like video streaming platform built during BrainStation ✿',
-  'website':              'my personal portfolio website — the one you\'re on right now ♡',
+  'brainflix':            'a YouTube-like video streaming platform built during BrainStation',
+  'website':              "my personal portfolio website — the one you're on right now",
   'penny':                'a personal finance tracker to manage and visualise spending',
   'launchpad':            'a job application tracker to stay on top of your search',
-  'bookmate':             'a Tinder-style book matching app — swipe to find your next read ✿ (BrainStation capstone project)',
+  'bookmate':             'a Tinder-style book matching app — swipe to find your next read (BrainStation capstone project)',
   'bandsite':             'a promotional website built for a fictional band (BrainStation)',
-  'salesforce-dashboard': 'a Salesforce REST API integration — OAuth 2.0 auth, live CRM data, and a filterable dashboard UI 🚧',
+  'salesforce-dashboard': 'a Salesforce REST API integration — OAuth 2.0 auth, live CRM data, and a filterable dashboard UI',
 };
 
 // fallback languages for repos that are new/empty (no code pushed yet)
