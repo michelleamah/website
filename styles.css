@@ -347,6 +347,30 @@ img { max-width: 100%; display: block; }
 .facts-list li:last-child { border-bottom: none; }
 .facts-list .lucide { width: 18px; height: 18px; color: var(--c1); flex-shrink: 0; stroke-width: 2.5; }
 
+/* interests card */
+.interests-card {
+  grid-column: 1 / -1;
+}
+.interests-card h3 {
+  color: var(--c3);
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.interest-block { display: flex; flex-direction: column; gap: 0.3rem; }
+.interest-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.2rem; }
+.interest-block h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.interest-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
 /* timeline */
 .timeline {
   position: relative;
