@@ -24,8 +24,8 @@ const PROJECT_LANGUAGES_FALLBACK = {
   'salesforce-dashboard': ['JavaScript', 'React', 'CSS'],
 };
 
-// how many projects to show (sorted by most recently updated)
-const MAX_PROJECTS = 6;
+// only show these repos (in this order)
+const PINNED_PROJECTS = ['website', 'bookmate', 'bandsite'];
 
 // ────────────────────────────────────────────────
 
@@ -96,9 +96,9 @@ async function loadGitHubProjects() {
     const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
     if (!res.ok) throw new Error('github api');
     const repos = await res.json();
-    const filtered = repos
-      .filter(r => !r.fork && !r.archived)
-      .slice(0, MAX_PROJECTS);
+    const filtered = PINNED_PROJECTS
+      .map(name => repos.find(r => r.name.toLowerCase() === name.toLowerCase()))
+      .filter(Boolean);
 
     if (filtered.length === 0) {
       grid.innerHTML = `<div class="card placeholder">no public repos yet ♡</div>`;
