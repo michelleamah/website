@@ -347,32 +347,25 @@ img { max-width: 100%; display: block; }
 .facts-list li:last-child { border-bottom: none; }
 .facts-list .lucide { width: 18px; height: 18px; color: var(--c1); flex-shrink: 0; stroke-width: 2.5; }
 
-/* interests card */
-.interests-card {
+/* hobbies 2×2 grid (spans full width inside about-grid) */
+.hobbies-grid {
   grid-column: 1 / -1;
-}
-.interests-card h3 {
-  color: var(--c3);
-  margin-bottom: 1.2rem;
-  font-size: 1.4rem;
-}
-.interests-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
-.interest-block { display: flex; flex-direction: column; gap: 0.3rem; }
-.interest-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.2rem; }
-.interest-block h4 {
+
+/* food & gaming hobby cards */
+.hobby-card { display: flex; flex-direction: column; gap: 0.4rem; }
+.hobby-card .interest-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.1rem; }
+.hobby-card h4 {
   font-family: 'Fraunces', serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1rem; font-weight: 600;
   color: var(--text);
 }
-.interest-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+.hobby-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
 /* on repeat — record player carousel */
-.on-repeat-card { grid-column: 1 / -1; }
 .on-repeat-card > h3 { color: var(--c3); margin-bottom: 1.5rem; font-size: 1.4rem; }
 
 .music-carousel { display: flex; align-items: center; gap: 1rem; }
@@ -632,34 +625,40 @@ img { max-width: 100%; display: block; }
   border-color: transparent;
 }
 
-/* outtakes */
+/* outtakes card (inside hobbies-grid) */
+.outtakes-card { display: flex; flex-direction: column; gap: 0.8rem; }
+.outtakes-card h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 600;
+  color: var(--text);
+}
 .outtakes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.9rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.6rem;
+  flex: 1;
 }
 .outtakes-grid img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1.5px solid var(--card-edge);
   display: block;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .outtakes-grid img:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: var(--shadow-lg);
 }
 .outtakes-empty {
   grid-column: 1 / -1;
   text-align: center;
   color: var(--muted);
-  font-size: 0.9rem;
-  padding: 3rem 1rem;
+  font-size: 0.85rem;
+  padding: 2rem 0.5rem;
   border: 2px dashed var(--card-edge);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* contact */
@@ -692,6 +691,7 @@ footer {
   .hero-cta { justify-content: center; }
   .photo-frame { width: 220px; height: 220px; }
   .about-grid { grid-template-columns: 1fr; }
+  .hobbies-grid { grid-template-columns: 1fr; }
   .section { padding: 3rem 1.5rem; }
   .t-head { flex-direction: column; align-items: flex-start; }
 }
