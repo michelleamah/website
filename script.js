@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('year').textContent = new Date().getFullYear();
   loadGitHubProjects();
   initMusicCarousel();
+  initPlayButtons();
 });
 
 // ───── record player carousel ─────
@@ -48,6 +49,7 @@ function initMusicCarousel() {
     cards[current].classList.remove('active');
     cards[current].querySelector('.record').classList.remove('spinning');
     dots[current].classList.remove('active');
+    stopPreview();
     current = ((n % cards.length) + cards.length) % cards.length;
     cards[current].classList.add('active');
     cards[current].querySelector('.record').classList.add('spinning');
@@ -57,6 +59,62 @@ function initMusicCarousel() {
   document.querySelector('.prev-btn').addEventListener('click', () => goTo(current - 1));
   document.querySelector('.next-btn').addEventListener('click', () => goTo(current + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+}
+
+// ───── song preview playback via iTunes API ─────
+const previewCache = {};
+let previewAudio = null;
+let activePlayBtn = null;
+
+function stopPreview() {
+  if (previewAudio) previewAudio.pause();
+  if (activePlayBtn) {
+    activePlayBtn.classList.remove('playing');
+    activePlayBtn = null;
+  }
+}
+
+async function getPreviewUrl(trackId) {
+  if (previewCache[trackId]) return previewCache[trackId];
+  try {
+    const res = await fetch(`https://itunes.apple.com/lookup?id=${trackId}`);
+    const data = await res.json();
+    const url = data.results?.[0]?.previewUrl;
+    if (url) previewCache[trackId] = url;
+    return url || null;
+  } catch { return null; }
+}
+
+function initPlayButtons() {
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const trackId = btn.dataset.track;
+
+      if (activePlayBtn === btn && previewAudio && !previewAudio.paused) {
+        stopPreview();
+        return;
+      }
+
+      stopPreview();
+      btn.classList.add('loading');
+      const url = await getPreviewUrl(trackId);
+      btn.classList.remove('loading');
+
+      if (!url) { btn.title = 'preview not available'; return; }
+
+      previewAudio = new Audio(url);
+      previewAudio.volume = 0.75;
+      previewAudio.play().catch(() => {});
+      btn.classList.add('playing');
+      activePlayBtn = btn;
+
+      previewAudio.addEventListener('ended', () => {
+        btn.classList.remove('playing');
+        activePlayBtn = null;
+      });
+    });
+  });
 }
 
 // ───── theme toggle ─────
