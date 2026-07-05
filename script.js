@@ -48,12 +48,10 @@ function initMusicCarousel() {
 
   function goTo(n) {
     cards[current].classList.remove('active');
-    cards[current].querySelector('.record').classList.remove('spinning');
     dots[current].classList.remove('active');
     stopPreview();
     current = ((n % cards.length) + cards.length) % cards.length;
     cards[current].classList.add('active');
-    cards[current].querySelector('.record').classList.add('spinning');
     dots[current].classList.add('active');
   }
 

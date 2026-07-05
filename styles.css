@@ -454,6 +454,15 @@ img { max-width: 100%; display: block; }
 /* compact record inside on-repeat block */
 .on-repeat-block .record { width: 100px; height: 100px; flex-shrink: 0; }
 
+/* album art replacing the record */
+.album-art {
+  width: 100px; height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
 /* Apple Music-style controls bar */
 .music-controls {
   display: flex; align-items: center; justify-content: center;
