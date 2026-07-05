@@ -354,7 +354,6 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
-  align-items: start;
 }
 .interest-block {
   display: flex; flex-direction: column; gap: 0.3rem;
@@ -362,7 +361,8 @@ img { max-width: 100%; display: block; }
   border: 1.5px solid var(--card-edge);
   border-radius: 12px;
   padding: 1rem;
-  min-height: 120px;
+  height: 320px;
+  overflow: hidden;
 }
 .interest-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.2rem; }
 .interest-block h4 {
@@ -374,13 +374,13 @@ img { max-width: 100%; display: block; }
 .interest-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
 /* on repeat inside interest-block */
-.on-repeat-block h4 { color: var(--c3); margin-bottom: 0.6rem; }
-.on-repeat-block .music-card { gap: 0.8rem; }
-.on-repeat-block .song-title { font-size: 0.95rem; }
+.on-repeat-block h4 { color: var(--c3); margin-bottom: 0.4rem; }
+.on-repeat-block .music-card { gap: 0.6rem; }
+.on-repeat-block .song-title { font-size: 0.9rem; margin-bottom: 0.2rem; }
 
 .carousel-window {
   position: relative;
-  height: 185px;
+  height: 155px;
   width: 100%;
 }
 
@@ -452,29 +452,29 @@ img { max-width: 100%; display: block; }
 }
 
 /* compact record inside on-repeat block */
-.on-repeat-block .record { width: 120px; height: 120px; flex-shrink: 0; }
+.on-repeat-block .record { width: 100px; height: 100px; flex-shrink: 0; }
 
 /* Apple Music-style controls bar */
 .music-controls {
   display: flex; align-items: center; justify-content: center;
   gap: 1rem;
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
 }
 .music-ctrl-btn {
   background: none; border: none; cursor: pointer;
   color: var(--muted);
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%; padding: 0.3rem;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.15s;
 }
-.music-ctrl-btn:hover { color: var(--text); }
+.music-ctrl-btn:hover { color: var(--c1); transform: scale(1.1); }
 .play-pause-btn {
-  width: 40px; height: 40px;
+  width: 38px; height: 38px;
   background: var(--c1); color: white !important;
   padding: 0;
   transition: background 0.2s, transform 0.15s;
 }
-.play-pause-btn:hover { background: var(--c3); transform: scale(1.07); }
+.play-pause-btn:hover { background: var(--c3); transform: scale(1.1); }
 .play-pause-btn.loading { opacity: 0.7; cursor: wait; }
 .play-pause-btn .icon-pause { display: none; }
 .play-pause-btn.playing .icon-play { display: none; }
@@ -504,7 +504,7 @@ img { max-width: 100%; display: block; }
 }
 .carousel-btn:hover { background: var(--c1); color: white; border-color: var(--c1); }
 
-.carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.2rem; }
+.carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.6rem; }
 .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
