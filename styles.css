@@ -374,13 +374,13 @@ img { max-width: 100%; display: block; }
 .interest-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
 /* on repeat inside interest-block */
-.on-repeat-block h4 { color: var(--c3); margin-bottom: 0.4rem; }
+.on-repeat-block h4 { margin-bottom: 0.4rem; }
 .on-repeat-block .music-card { gap: 0.6rem; }
 .on-repeat-block .song-title { font-size: 0.9rem; margin-bottom: 0.2rem; }
 
 .carousel-window {
   position: relative;
-  height: 155px;
+  height: 170px;
   width: 100%;
 }
 
@@ -482,11 +482,15 @@ img { max-width: 100%; display: block; }
 
 .song-info { text-align: center; }
 .song-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.15rem; font-weight: 600;
-  color: var(--text); margin-bottom: 0.4rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--text); margin-bottom: 0.1rem;
 }
-.apple-link { font-size: 0.85rem; color: var(--c1); text-decoration: none; transition: opacity 0.2s; }
+.song-artist {
+  font-size: 0.75rem; color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+.apple-link { font-size: 0.78rem; color: var(--c1); text-decoration: none; transition: opacity 0.2s; }
 .apple-link:hover { opacity: 0.65; }
 
 .carousel-btn {
