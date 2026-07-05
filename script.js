@@ -68,10 +68,9 @@ let activePlayBtn = null;
 
 function stopPreview() {
   if (previewAudio) previewAudio.pause();
-  if (activePlayBtn) {
-    activePlayBtn.classList.remove('playing');
-    activePlayBtn = null;
-  }
+  const btn = document.querySelector('.play-pause-btn');
+  if (btn) btn.classList.remove('playing');
+  activePlayBtn = null;
 }
 
 async function getPreviewUrl(trackId) {
@@ -86,33 +85,35 @@ async function getPreviewUrl(trackId) {
 }
 
 function initPlayButtons() {
-  document.querySelectorAll('.play-btn').forEach(btn => {
-    btn.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      const trackId = btn.dataset.track;
+  const btn = document.querySelector('.play-pause-btn');
+  if (!btn) return;
 
-      if (activePlayBtn === btn && previewAudio && !previewAudio.paused) {
-        stopPreview();
-        return;
-      }
+  btn.addEventListener('click', async () => {
+    const activeCard = document.querySelector('.music-card.active');
+    if (!activeCard) return;
+    const trackId = activeCard.dataset.track;
 
+    if (activePlayBtn === btn && previewAudio && !previewAudio.paused) {
       stopPreview();
-      btn.classList.add('loading');
-      const url = await getPreviewUrl(trackId);
-      btn.classList.remove('loading');
+      return;
+    }
 
-      if (!url) { btn.title = 'preview not available'; return; }
+    stopPreview();
+    btn.classList.add('loading');
+    const url = await getPreviewUrl(trackId);
+    btn.classList.remove('loading');
 
-      previewAudio = new Audio(url);
-      previewAudio.volume = 0.75;
-      previewAudio.play().catch(() => {});
-      btn.classList.add('playing');
-      activePlayBtn = btn;
+    if (!url) { btn.title = 'preview not available'; return; }
 
-      previewAudio.addEventListener('ended', () => {
-        btn.classList.remove('playing');
-        activePlayBtn = null;
-      });
+    previewAudio = new Audio(url);
+    previewAudio.volume = 0.75;
+    previewAudio.play().catch(() => {});
+    btn.classList.add('playing');
+    activePlayBtn = btn;
+
+    previewAudio.addEventListener('ended', () => {
+      btn.classList.remove('playing');
+      activePlayBtn = null;
     });
   });
 }

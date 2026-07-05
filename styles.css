@@ -362,6 +362,7 @@ img { max-width: 100%; display: block; }
   border: 1.5px solid var(--card-edge);
   border-radius: 12px;
   padding: 1rem;
+  min-height: 120px;
 }
 .interest-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.2rem; }
 .interest-block h4 {
@@ -377,12 +378,10 @@ img { max-width: 100%; display: block; }
 .on-repeat-block .music-card { gap: 0.8rem; }
 .on-repeat-block .song-title { font-size: 0.95rem; }
 
-.music-carousel { display: flex; align-items: center; gap: 0.6rem; }
-
 .carousel-window {
-  flex: 1;
   position: relative;
-  height: 210px;
+  height: 185px;
+  width: 100%;
 }
 
 /* all cards sit on top of each other, centered; only .active is visible */
@@ -452,41 +451,34 @@ img { max-width: 100%; display: block; }
   to   { transform: rotate(360deg); }
 }
 
-/* record wrap — positions play button over the vinyl without spinning with it */
-.record-wrap {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  flex-shrink: 0;
+/* compact record inside on-repeat block */
+.on-repeat-block .record { width: 120px; height: 120px; flex-shrink: 0; }
+
+/* Apple Music-style controls bar */
+.music-controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1rem;
+  margin-top: 0.6rem;
 }
-.record-wrap .record { flex-shrink: unset; }
-
-/* compact record inside the interests card */
-.on-repeat-block .record-wrap { width: 120px; height: 120px; }
-.on-repeat-block .record { width: 120px; height: 120px; }
-
-.play-btn {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.55);
-  border: 2px solid rgba(255,255,255,0.45);
-  color: white;
-  cursor: pointer;
-  display: grid; place-items: center;
-  z-index: 2;
-  opacity: 0.45;
-  transition: opacity 0.2s, background 0.2s;
+.music-ctrl-btn {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; padding: 0.3rem;
+  transition: color 0.2s;
+}
+.music-ctrl-btn:hover { color: var(--text); }
+.play-pause-btn {
+  width: 40px; height: 40px;
+  background: var(--c1); color: white !important;
   padding: 0;
+  transition: background 0.2s, transform 0.15s;
 }
-.record-wrap:hover .play-btn { opacity: 1; }
-.play-btn.playing { opacity: 1; background: rgba(0,0,0,0.7); }
-.play-btn.loading { opacity: 0.7; cursor: wait; }
-.play-btn .icon-pause { display: none; }
-.play-btn.playing .icon-play { display: none; }
-.play-btn.playing .icon-pause { display: block; }
+.play-pause-btn:hover { background: var(--c3); transform: scale(1.07); }
+.play-pause-btn.loading { opacity: 0.7; cursor: wait; }
+.play-pause-btn .icon-pause { display: none; }
+.play-pause-btn.playing .icon-play { display: none; }
+.play-pause-btn.playing .icon-pause { display: block; }
 
 .song-info { text-align: center; }
 .song-title {
