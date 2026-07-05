@@ -34,7 +34,30 @@ window.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
   document.getElementById('year').textContent = new Date().getFullYear();
   loadGitHubProjects();
+  initMusicCarousel();
 });
+
+// ───── record player carousel ─────
+function initMusicCarousel() {
+  const cards = document.querySelectorAll('.music-card');
+  const dots  = document.querySelectorAll('.carousel-dots .dot');
+  if (!cards.length) return;
+  let current = 0;
+
+  function goTo(n) {
+    cards[current].classList.remove('active');
+    cards[current].querySelector('.record').classList.remove('spinning');
+    dots[current].classList.remove('active');
+    current = ((n % cards.length) + cards.length) % cards.length;
+    cards[current].classList.add('active');
+    cards[current].querySelector('.record').classList.add('spinning');
+    dots[current].classList.add('active');
+  }
+
+  document.querySelector('.prev-btn').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.next-btn').addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+}
 
 // ───── theme toggle ─────
 const themeToggle = document.getElementById('theme-toggle');

@@ -371,25 +371,84 @@ img { max-width: 100%; display: block; }
 }
 .interest-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
-/* on repeat card */
-.on-repeat-card {
-  grid-column: 1 / -1;
+/* on repeat — record player carousel */
+.on-repeat-card { grid-column: 1 / -1; }
+.on-repeat-card > h3 { color: var(--c3); margin-bottom: 1.5rem; font-size: 1.4rem; }
+
+.music-carousel { display: flex; align-items: center; gap: 1rem; }
+.carousel-window {
+  flex: 1;
+  position: relative;
+  min-height: 270px;
+  display: flex; align-items: center; justify-content: center;
 }
-.on-repeat-card h3 {
-  color: var(--c3);
-  margin-bottom: 1.2rem;
-  font-size: 1.4rem;
+.music-card {
+  position: absolute; width: 100%;
+  display: flex; flex-direction: column; align-items: center; gap: 1.4rem;
+  opacity: 0; pointer-events: none;
+  transform: scale(0.94) translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.songs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+.music-card.active { opacity: 1; pointer-events: auto; transform: scale(1) translateY(0); }
+
+/* vinyl record */
+.record {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--lc) 0% 22%,
+    rgba(0,0,0,0.45) 22% 25%,
+    #1c1c2e 25% 36%, #252538 36% 39%,
+    #1c1c2e 39% 52%, #252538 52% 55%,
+    #1c1c2e 55% 68%, #252538 68% 71%,
+    #1c1c2e 71% 84%, #252538 84% 87%,
+    #1c1c2e 87% 100%
+  );
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+  position: relative;
+  animation: vinyl-spin 3s linear infinite;
+  animation-play-state: paused;
+  flex-shrink: 0;
 }
-.songs-grid iframe {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
+.record::after {
+  content: '';
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #0a0a1a;
+  border: 1px solid rgba(255,255,255,0.12);
 }
+.record.spinning { animation-play-state: running; }
+.record.label-c1 { --lc: var(--c1); }
+.record.label-c2 { --lc: var(--c2); }
+.record.label-c3 { --lc: var(--c3); }
+.record.label-c4 { --lc: var(--c4); }
+.record.label-c5 { --lc: var(--c5); }
+@keyframes vinyl-spin { to { transform: rotate(360deg); } }
+
+.song-info { text-align: center; }
+.song-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+.apple-link { font-size: 0.85rem; color: var(--c1); text-decoration: none; transition: opacity 0.2s; }
+.apple-link:hover { opacity: 0.65; }
+
+.carousel-btn {
+  background: var(--card); border: 1.5px solid var(--card-edge);
+  color: var(--text); width: 38px; height: 38px;
+  border-radius: 50%; cursor: pointer; font-size: 1.5rem;
+  display: grid; place-items: center; flex-shrink: 0;
+  transition: all 0.2s; line-height: 1; padding-bottom: 1px;
+}
+.carousel-btn:hover { background: var(--c1); color: white; border-color: var(--c1); }
+
+.carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.2rem; }
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--card-edge); border: none; cursor: pointer; padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.dot.active { background: var(--c1); transform: scale(1.35); }
 
 /* timeline */
 .timeline {
