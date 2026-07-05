@@ -353,9 +353,16 @@ img { max-width: 100%; display: block; }
 .interests-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  align-items: start;
 }
-.interest-block { display: flex; flex-direction: column; gap: 0.3rem; }
+.interest-block {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  background: var(--bg);
+  border: 1.5px solid var(--card-edge);
+  border-radius: 12px;
+  padding: 1rem;
+}
 .interest-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.2rem; }
 .interest-block h4 {
   font-family: 'Fraunces', serif;
@@ -366,14 +373,16 @@ img { max-width: 100%; display: block; }
 .interest-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 
 /* on repeat inside interest-block */
-.on-repeat-block h4 { color: var(--c3); }
+.on-repeat-block h4 { color: var(--c3); margin-bottom: 0.6rem; }
+.on-repeat-block .music-card { gap: 0.8rem; }
+.on-repeat-block .song-title { font-size: 0.95rem; }
 
-.music-carousel { display: flex; align-items: center; gap: 1rem; }
+.music-carousel { display: flex; align-items: center; gap: 0.6rem; }
 
 .carousel-window {
   flex: 1;
   position: relative;
-  height: 260px;
+  height: 210px;
 }
 
 /* all cards sit on top of each other, centered; only .active is visible */
@@ -451,6 +460,10 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 .record-wrap .record { flex-shrink: unset; }
+
+/* compact record inside the interests card */
+.on-repeat-block .record-wrap { width: 120px; height: 120px; }
+.on-repeat-block .record { width: 120px; height: 120px; }
 
 .play-btn {
   position: absolute;
@@ -649,8 +662,9 @@ img { max-width: 100%; display: block; }
   grid-column: 1 / -1;
   color: var(--muted);
   font-size: 0.82rem;
-  padding: 0.6rem 0;
+  padding: 1.5rem 0;
   font-style: italic;
+  text-align: center;
 }
 
 /* contact */
