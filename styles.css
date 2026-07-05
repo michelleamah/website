@@ -482,13 +482,9 @@ img { max-width: 100%; display: block; }
 
 .song-info { text-align: center; }
 .song-title {
-  font-family: 'Caveat', cursive;
-  font-size: 1.15rem; font-weight: 700;
-  color: var(--text); margin-bottom: 0.1rem;
-}
-.song-artist {
-  font-size: 0.75rem; color: var(--muted);
-  margin-bottom: 0.3rem;
+  font-size: 0.85rem; font-weight: 500;
+  color: var(--text); margin-bottom: 0.3rem;
+  line-height: 1.4;
 }
 .apple-link { font-size: 0.78rem; color: var(--c1); text-decoration: none; transition: opacity 0.2s; }
 .apple-link:hover { opacity: 0.65; }
@@ -634,28 +630,44 @@ img { max-width: 100%; display: block; }
   border-color: transparent;
 }
 
-/* outtakes (inside outside-work interest-block) */
-.outtakes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 0.5rem;
-  margin-top: 0.3rem;
+/* outtakes stacked cards */
+.outtakes-block { align-items: center; }
+.photo-stack {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0.6rem auto 0;
+  cursor: pointer;
+  flex-shrink: 0;
 }
-.outtakes-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1.5px solid var(--card-edge);
-  display: block;
-  transition: transform 0.2s, box-shadow 0.2s;
+.photo-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 2px solid var(--card-edge);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  transform: rotate(var(--rot, 0deg));
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.5s;
+  will-change: transform, opacity;
 }
-.outtakes-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: var(--shadow-lg);
+.photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.placeholder-card {
+  background: linear-gradient(135deg, var(--card-edge) 0%, var(--bg) 100%);
 }
+.photo-card.flying {
+  transform: rotate(25deg) translateX(260%) translateY(-40%) !important;
+  opacity: 0;
+}
+.stack-hint {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+/* legacy empty state (kept for safety) */
 .outtakes-empty {
-  grid-column: 1 / -1;
   color: var(--muted);
   font-size: 0.82rem;
   padding: 1.5rem 0;

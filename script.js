@@ -36,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
   loadGitHubProjects();
   initMusicCarousel();
   initPlayButtons();
+  initPhotoStack();
 });
 
 // ───── record player carousel ─────
@@ -223,4 +224,36 @@ function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, s => ({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
   })[s]);
+}
+
+// ───── outtakes stacked card flip ─────
+function initPhotoStack() {
+  const stack = document.querySelector('.photo-stack');
+  if (!stack) return;
+  let cards = Array.from(stack.querySelectorAll('.photo-card'));
+  if (!cards.length) return;
+  let busy = false;
+
+  function restack() {
+    cards.forEach((c, i) => c.style.zIndex = i + 1);
+  }
+  restack();
+
+  stack.addEventListener('click', () => {
+    if (busy) return;
+    busy = true;
+    const top = cards[cards.length - 1];
+    top.classList.add('flying');
+
+    setTimeout(() => {
+      top.style.transition = 'none';
+      top.classList.remove('flying');
+      cards = [top, ...cards.slice(0, -1)];
+      restack();
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        top.style.transition = '';
+        busy = false;
+      }));
+    }, 480);
+  });
 }
