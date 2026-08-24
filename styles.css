@@ -167,6 +167,7 @@ img { max-width: 100%; display: block; }
 .nav ul a::after {
   content: ''; position: absolute; bottom: -4px; left: 0;
   width: 0; height: 2px; background: var(--c1); border-radius: 2px;
+  transition: width 0.3s;
 }
 .nav ul a:hover::after { width: 100%; }
 
