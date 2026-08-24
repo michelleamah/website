@@ -33,7 +33,6 @@ const PINNED_PROJECTS = ['website', 'bookmate', 'bandsite'];
 window.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
   document.getElementById('year').textContent = new Date().getFullYear();
-  loadGitHubProjects();
   initMusicCarousel();
   initPlayButtons();
   initPhotoStack();
