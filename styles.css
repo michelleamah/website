@@ -67,7 +67,7 @@ h1, h2, h3 {
 }
 
 a { color: var(--c3); text-decoration: none; transition: opacity 0.2s; }
-a:hover { opacity: 0.7; }
+a:hover { opacity: 0.8; }
 
 img { max-width: 100%; display: block; }
 
@@ -129,7 +129,7 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
   transition: transform 0.2s, background 0.3s;
 }
-.ctrl-btn:hover { transform: translateY(-2px) scale(1.05); background: var(--c1); border-color: var(--c1); }
+.ctrl-btn:hover { background: var(--c1); border-color: var(--c1); }
 .ctrl-btn.playing { background: var(--c1); color: white; }
 .ctrl-btn i, .ctrl-btn svg, .ctrl-btn .icon { width: 18px; height: 18px; display: block; }
 
@@ -167,7 +167,6 @@ img { max-width: 100%; display: block; }
 .nav ul a::after {
   content: ''; position: absolute; bottom: -4px; left: 0;
   width: 0; height: 2px; background: var(--c1); border-radius: 2px;
-  transition: width 0.3s;
 }
 .nav ul a:hover::after { width: 100%; }
 
@@ -214,17 +213,15 @@ img { max-width: 100%; display: block; }
   color: white;
   box-shadow: var(--shadow);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); opacity: 1; }
+.btn-primary:hover { opacity: 1; }
 .btn-ghost {
   background: var(--card);
   color: var(--text);
   border: 1.5px solid var(--card-edge);
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 .btn-ghost:hover {
   background: var(--bg-soft);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--c1);
   opacity: 1;
 }
@@ -232,8 +229,6 @@ img { max-width: 100%; display: block; }
   background: color-mix(in srgb, var(--c1) 18%, var(--card));
   border-color: var(--c1);
   color: var(--c1);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
 }
 
 /* socials */
@@ -248,7 +243,6 @@ img { max-width: 100%; display: block; }
   transition: all 0.25s;
 }
 .socials a:hover {
-  transform: translateY(-3px) rotate(-6deg);
   background: var(--c1); color: white;
   border-color: var(--c1);
   opacity: 1;
@@ -322,9 +316,9 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 1.8rem;
   box-shadow: var(--shadow);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: box-shadow 0.25s;
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.card:hover { box-shadow: var(--shadow-lg); }
 
 /* about */
 .about-grid {
@@ -476,14 +470,14 @@ img { max-width: 100%; display: block; }
   border-radius: 50%; padding: 0.3rem;
   transition: color 0.2s, transform 0.15s;
 }
-.music-ctrl-btn:hover { color: var(--c1); transform: scale(1.1); }
+.music-ctrl-btn:hover { color: var(--c1); }
 .play-pause-btn {
   width: 38px; height: 38px;
   background: var(--c1); color: white !important;
   padding: 0;
   transition: background 0.2s, transform 0.15s;
 }
-.play-pause-btn:hover { background: var(--c3); transform: scale(1.1); }
+.play-pause-btn:hover { background: var(--c3); }
 .play-pause-btn.loading { opacity: 0.7; cursor: wait; }
 .play-pause-btn .icon-pause { display: none; }
 .play-pause-btn.playing .icon-play { display: none; }
@@ -633,7 +627,6 @@ img { max-width: 100%; display: block; }
   cursor: default;
 }
 .chip:hover {
-  transform: translateY(-2px);
   background: linear-gradient(135deg, var(--c1), var(--c3));
   color: white;
   border-color: transparent;
