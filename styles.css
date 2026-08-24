@@ -316,9 +316,7 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 1.8rem;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.25s;
 }
-.card:hover { box-shadow: var(--shadow-lg); }
 
 /* about */
 .about-grid {
