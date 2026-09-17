@@ -124,6 +124,9 @@ body {
   perspective: 700px;
   padding: 0;
   width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--brown);
+  text-align: left;
   transition: background 0.16s, box-shadow 0.16s;
 }
 .cell:hover {
@@ -135,6 +138,7 @@ body {
 .cell-hero {
   grid-area: hero;
   min-height: 92px;
+  perspective: 1800px;
 }
 .cell-edu     { grid-area: edu; }
 .cell-exp     { grid-area: exp; }
@@ -165,18 +169,24 @@ body {
   display: flex;
 }
 .cell-front {
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: stretch;
   overflow: hidden;
+  background: #fff6e6;
+  box-shadow:
+    inset 0 3px 8px rgba(120,60,0,0.12),
+    inset 0 -1px 0 rgba(255,255,255,0.8);
 }
 .cell-front svg {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 /* ── back (text content) ── */
 .cell-back {
   transform: rotateY(180deg);
+  background: var(--cell);
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -363,6 +373,7 @@ footer {
   .tray-inner { width: auto; flex: 0; height: 36px; flex-direction: row; padding: 0 8px; align-items: center; gap: 10px; }
   .tray-stick { width: 56px; height: 4px; }
   .bento { grid-template-columns: 1fr; grid-template-areas: "hero" "edu" "exp" "proj" "contact"; }
+  .cell-hero { min-height: 150px; }
   .cell-hero .cell-back { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.2rem; }
   .modal-body { padding: 1.2rem 1.2rem 2rem; }
 }

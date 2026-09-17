@@ -35,40 +35,83 @@
   <div class="bento-layout">
     <div class="bento">
 
-      <!-- HERO — onigiri trio -->
+      <!-- HERO — onigiri family -->
       <button class="cell cell-hero" onclick="openCell(this,'about','🍱')">
         <div class="cell-inner">
           <div class="cell-front">
-            <svg viewBox="0 0 420 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- subtle grid pattern on back -->
-              <rect width="420" height="110" fill="#fffdf8"/>
-              <!-- onigiri 1 -->
-              <g transform="translate(90,82)">
-                <path d="M0,-62 C-28,-62 -42,-30 -42,0 L42,0 C42,-30 28,-62 0,-62 Z" fill="#fff8ee" stroke="#d4a96a" stroke-width="2"/>
-                <rect x="-42" y="-16" width="84" height="22" rx="3" fill="#2d1a0e"/>
-                <ellipse cx="0" cy="-36" rx="7" ry="6" fill="#ffb3b3" opacity="0.7"/>
-                <circle cx="-14" cy="-52" r="2" fill="#d4a96a" opacity="0.5"/>
-                <circle cx="14" cy="-50" r="1.5" fill="#d4a96a" opacity="0.5"/>
+            <svg viewBox="0 0 720 94" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- sushi grass (baran) left -->
+              <path d="M0,0 H22 L28,12 L22,24 L28,36 L22,48 L28,60 L22,72 L28,84 L22,94 H0 Z" fill="#6fbf73"/>
+              <path d="M0,0 H12 L16,12 L12,24 L16,36 L12,48 L16,60 L12,72 L16,84 L12,94 H0 Z" fill="#5aab5e"/>
+
+              <!-- onigiri helper: drawn 4x -->
+              <g transform="translate(120,90)">
+                <path d="M0,-78 C-32,-78 -50,-40 -50,0 L50,0 C50,-40 32,-78 0,-78 Z" fill="#fffaf0" stroke="#e2c28c" stroke-width="2"/>
+                <rect x="-50" y="-22" width="100" height="24" rx="3" fill="#2d1a0e"/>
+                <circle cx="-11" cy="-46" r="2.6" fill="#3d2010"/><circle cx="11" cy="-46" r="2.6" fill="#3d2010"/>
+                <path d="M-6,-37 Q0,-31 6,-37" fill="none" stroke="#3d2010" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="-19" cy="-38" rx="5" ry="3" fill="#ffb3b3" opacity="0.7"/><ellipse cx="19" cy="-38" rx="5" ry="3" fill="#ffb3b3" opacity="0.7"/>
+                <circle cx="-22" cy="-62" r="1.8" fill="#3d2010" opacity="0.5"/><circle cx="18" cy="-66" r="1.8" fill="#3d2010" opacity="0.5"/>
               </g>
-              <!-- onigiri 2 (center, slightly larger) -->
-              <g transform="translate(210,82)">
-                <path d="M0,-66 C-30,-66 -46,-32 -46,0 L46,0 C46,-32 30,-66 0,-66 Z" fill="#fff8ee" stroke="#d4a96a" stroke-width="2"/>
-                <rect x="-46" y="-18" width="92" height="24" rx="3" fill="#2d1a0e"/>
-                <ellipse cx="0" cy="-40" rx="8" ry="7" fill="#e8a87c" opacity="0.8"/>
-                <circle cx="-16" cy="-55" r="2" fill="#d4a96a" opacity="0.5"/>
-                <circle cx="16" cy="-53" r="1.5" fill="#d4a96a" opacity="0.5"/>
+
+              <!-- cherry tomato -->
+              <g transform="translate(205,72)">
+                <circle cx="0" cy="0" r="18" fill="#e85d4a"/>
+                <ellipse cx="-6" cy="-7" rx="5" ry="3" fill="white" opacity="0.45" transform="rotate(-25)"/>
+                <path d="M-8,-16 Q0,-22 8,-16 Q4,-13 0,-14 Q-4,-13 -8,-16Z" fill="#5aab5e"/>
+                <circle cx="-5" cy="1" r="1.8" fill="#3d2010"/><circle cx="5" cy="1" r="1.8" fill="#3d2010"/>
+                <path d="M-3,6 Q0,9 3,6" fill="none" stroke="#3d2010" stroke-width="1.5" stroke-linecap="round"/>
               </g>
-              <!-- onigiri 3 -->
-              <g transform="translate(330,82)">
-                <path d="M0,-62 C-28,-62 -42,-30 -42,0 L42,0 C42,-30 28,-62 0,-62 Z" fill="#fff8ee" stroke="#d4a96a" stroke-width="2"/>
-                <rect x="-42" y="-16" width="84" height="22" rx="3" fill="#2d1a0e"/>
-                <ellipse cx="0" cy="-36" rx="7" ry="6" fill="#a8d8a8" opacity="0.7"/>
-                <circle cx="-13" cy="-52" r="2" fill="#d4a96a" opacity="0.5"/>
-                <circle cx="13" cy="-50" r="1.5" fill="#d4a96a" opacity="0.5"/>
+
+              <g transform="translate(290,90)">
+                <path d="M0,-78 C-32,-78 -50,-40 -50,0 L50,0 C50,-40 32,-78 0,-78 Z" fill="#fffaf0" stroke="#e2c28c" stroke-width="2"/>
+                <rect x="-50" y="-22" width="100" height="24" rx="3" fill="#2d1a0e"/>
+                <path d="M-14,-48 Q-11,-52 -8,-48" fill="none" stroke="#3d2010" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M8,-48 Q11,-52 14,-48" fill="none" stroke="#3d2010" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M-7,-38 Q0,-30 7,-38" fill="none" stroke="#3d2010" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="-19" cy="-38" rx="5" ry="3" fill="#ffb3b3" opacity="0.7"/><ellipse cx="19" cy="-38" rx="5" ry="3" fill="#ffb3b3" opacity="0.7"/>
+                <ellipse cx="0" cy="-60" rx="9" ry="6" fill="#f4a28c" opacity="0.85"/>
               </g>
-              <!-- little dots for decoration -->
-              <circle cx="40" cy="20" r="3" fill="#d4a96a" opacity="0.2"/>
-              <circle cx="380" cy="85" r="2" fill="#d4a96a" opacity="0.2"/>
+
+              <g transform="translate(375,72)">
+                <circle cx="0" cy="0" r="18" fill="#e85d4a"/>
+                <ellipse cx="-6" cy="-7" rx="5" ry="3" fill="white" opacity="0.45" transform="rotate(-25)"/>
+                <path d="M-8,-16 Q0,-22 8,-16 Q4,-13 0,-14 Q-4,-13 -8,-16Z" fill="#5aab5e"/>
+                <circle cx="-5" cy="1" r="1.8" fill="#3d2010"/><circle cx="5" cy="1" r="1.8" fill="#3d2010"/>
+                <path d="M-3,6 Q0,9 3,6" fill="none" stroke="#3d2010" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+
+              <g transform="translate(460,90)">
+                <path d="M0,-78 C-32,-78 -50,-40 -50,0 L50,0 C50,-40 32,-78 0,-78 Z" fill="#fffaf0" stroke="#e2c28c" stroke-width="2"/>
+                <rect x="-50" y="-22" width="100" height="24" rx="3" fill="#2d1a0e"/>
+                <circle cx="-11" cy="-46" r="2.6" fill="#3d2010"/><circle cx="11" cy="-46" r="2.6" fill="#3d2010"/>
+                <ellipse cx="0" cy="-35" rx="4" ry="3" fill="#3d2010"/>
+                <ellipse cx="-19" cy="-38" rx="5" ry="3" fill="#ffb3b3" opacity="0.7"/><ellipse cx="19" cy="-38" rx="5" ry="3" fill="#ffb3b3" opacity="0.7"/>
+                <circle cx="-20" cy="-64" r="1.8" fill="#3d2010" opacity="0.5"/><circle cx="22" cy="-60" r="1.8" fill="#3d2010" opacity="0.5"/>
+              </g>
+
+              <!-- sakura carrots -->
+              <g transform="translate(560,34)" fill="#f4a261">
+                <circle cx="0" cy="-10" r="6"/><circle cx="9.5" cy="-3" r="6"/><circle cx="6" cy="8" r="6"/><circle cx="-6" cy="8" r="6"/><circle cx="-9.5" cy="-3" r="6"/>
+                <circle cx="0" cy="0" r="5" fill="#ffc98a"/>
+              </g>
+              <g transform="translate(598,64)" fill="#f4a261">
+                <circle cx="0" cy="-8" r="5"/><circle cx="7.6" cy="-2.5" r="5"/><circle cx="4.7" cy="6.5" r="5"/><circle cx="-4.7" cy="6.5" r="5"/><circle cx="-7.6" cy="-2.5" r="5"/>
+                <circle cx="0" cy="0" r="4" fill="#ffc98a"/>
+              </g>
+
+              <!-- edamame -->
+              <g transform="translate(655,52) rotate(-28)">
+                <ellipse cx="0" cy="0" rx="34" ry="12" fill="#7ec87e"/>
+                <circle cx="-16" cy="0" r="8" fill="#9ad89a"/><circle cx="0" cy="0" r="8.5" fill="#9ad89a"/><circle cx="16" cy="0" r="8" fill="#9ad89a"/>
+              </g>
+              <g transform="translate(665,80) rotate(12)">
+                <ellipse cx="0" cy="0" rx="28" ry="10" fill="#6fbf73"/>
+                <circle cx="-12" cy="0" r="6.5" fill="#9ad89a"/><circle cx="6" cy="0" r="7" fill="#9ad89a"/>
+              </g>
+
+              <!-- sushi grass right -->
+              <path d="M720,0 H698 L692,12 L698,24 L692,36 L698,48 L692,60 L698,72 L692,84 L698,94 H720 Z" fill="#6fbf73"/>
             </svg>
           </div>
           <div class="cell-back">
@@ -81,42 +124,58 @@
         </div>
       </button>
 
-      <!-- EDUCATION — tamagoyaki slices -->
+      <!-- EDUCATION — tamagoyaki -->
       <button class="cell cell-edu" onclick="openCell(this,'education','🎓')">
         <div class="cell-inner">
           <div class="cell-front">
-            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="200" height="170" fill="#fffdf8"/>
-              <!-- tamagoyaki log - side view showing layers -->
-              <!-- slice 1 (back) -->
-              <g transform="translate(58,110)">
-                <rect x="0" y="0" width="52" height="38" rx="8" fill="#f5c842" stroke="#c8890a" stroke-width="1.5"/>
-                <rect x="4" y="7" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
-                <rect x="4" y="17" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
-                <rect x="4" y="27" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+            <svg viewBox="0 0 350 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- sushi grass right -->
+              <path d="M350,0 H322 L316,14 L322,28 L316,42 L322,56 L316,70 L322,84 L316,98 L322,112 L316,126 L322,140 L316,150 H350 Z" fill="#6fbf73"/>
+              <path d="M350,0 H336 L332,14 L336,28 L332,42 L336,56 L332,70 L336,84 L332,98 L336,112 L332,126 L336,140 L332,150 H350 Z" fill="#5aab5e"/>
+
+              <!-- back slice -->
+              <g transform="translate(18,66)">
+                <rect x="0" y="0" width="96" height="70" rx="14" fill="#f5c842" stroke="#d99a1a" stroke-width="2"/>
+                <rect x="10" y="10" width="76" height="50" rx="10" fill="none" stroke="#e8ab2a" stroke-width="3"/>
+                <rect x="22" y="22" width="52" height="26" rx="8" fill="none" stroke="#e8ab2a" stroke-width="3"/>
+                <rect x="34" y="31" width="28" height="8" rx="4" fill="#e8ab2a"/>
               </g>
-              <!-- slice 2 (middle) -->
-              <g transform="translate(76,88)">
-                <rect x="0" y="0" width="52" height="38" rx="8" fill="#f8d45c" stroke="#c8890a" stroke-width="1.5"/>
-                <rect x="4" y="7" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
-                <rect x="4" y="17" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
-                <rect x="4" y="27" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+              <!-- right slice -->
+              <g transform="translate(208,60)">
+                <rect x="0" y="0" width="96" height="70" rx="14" fill="#f5c842" stroke="#d99a1a" stroke-width="2"/>
+                <rect x="10" y="10" width="76" height="50" rx="10" fill="none" stroke="#e8ab2a" stroke-width="3"/>
+                <rect x="22" y="22" width="52" height="26" rx="8" fill="none" stroke="#e8ab2a" stroke-width="3"/>
+                <rect x="34" y="31" width="28" height="8" rx="4" fill="#e8ab2a"/>
               </g>
-              <!-- slice 3 (front) -->
-              <g transform="translate(94,66)">
-                <rect x="0" y="0" width="52" height="38" rx="8" fill="#fce97a" stroke="#c8890a" stroke-width="1.5"/>
-                <rect x="4" y="7" width="44" height="6" rx="2" fill="#f5c842" opacity="0.7"/>
-                <rect x="4" y="17" width="44" height="6" rx="2" fill="#f5c842" opacity="0.7"/>
-                <rect x="4" y="27" width="44" height="6" rx="2" fill="#f5c842" opacity="0.7"/>
-                <!-- chopstick holes -->
-                <circle cx="10" cy="19" r="3" fill="#c8890a" opacity="0.4"/>
+              <!-- front slice with face -->
+              <g transform="translate(108,42)">
+                <rect x="0" y="0" width="104" height="76" rx="15" fill="#fbd95a" stroke="#d99a1a" stroke-width="2"/>
+                <rect x="10" y="10" width="84" height="56" rx="11" fill="none" stroke="#e8ab2a" stroke-width="3"/>
+                <rect x="22" y="22" width="60" height="32" rx="9" fill="none" stroke="#e8ab2a" stroke-width="3" opacity="0.5"/>
+                <circle cx="40" cy="36" r="3" fill="#3d2010"/><circle cx="64" cy="36" r="3" fill="#3d2010"/>
+                <path d="M46,45 Q52,51 58,45" fill="none" stroke="#3d2010" stroke-width="2.2" stroke-linecap="round"/>
+                <ellipse cx="30" cy="44" rx="6" ry="3.5" fill="#ffb3b3" opacity="0.75"/><ellipse cx="74" cy="44" rx="6" ry="3.5" fill="#ffb3b3" opacity="0.75"/>
               </g>
-              <!-- little green garnish -->
-              <ellipse cx="154" cy="130" rx="10" ry="5" fill="#7ec87e" opacity="0.8" transform="rotate(-20,154,130)"/>
-              <ellipse cx="160" cy="124" rx="8" ry="4" fill="#5aab5a" opacity="0.7" transform="rotate(-25,160,124)"/>
-              <!-- dots -->
-              <circle cx="30" cy="140" r="3" fill="#d4a96a" opacity="0.2"/>
-              <circle cx="170" cy="40" r="2.5" fill="#d4a96a" opacity="0.2"/>
+
+              <!-- sakura carrots top-left -->
+              <g transform="translate(40,30)" fill="#f4a261">
+                <circle cx="0" cy="-9" r="5.5"/><circle cx="8.5" cy="-3" r="5.5"/><circle cx="5.3" cy="7.3" r="5.5"/><circle cx="-5.3" cy="7.3" r="5.5"/><circle cx="-8.5" cy="-3" r="5.5"/>
+                <circle cx="0" cy="0" r="4.5" fill="#ffc98a"/>
+              </g>
+              <g transform="translate(76,18)" fill="#f4a261">
+                <circle cx="0" cy="-7" r="4.5"/><circle cx="6.7" cy="-2.2" r="4.5"/><circle cx="4.1" cy="5.7" r="4.5"/><circle cx="-4.1" cy="5.7" r="4.5"/><circle cx="-6.7" cy="-2.2" r="4.5"/>
+                <circle cx="0" cy="0" r="3.5" fill="#ffc98a"/>
+              </g>
+
+              <!-- edamame pods top-right -->
+              <g transform="translate(262,26) rotate(-20)">
+                <ellipse cx="0" cy="0" rx="34" ry="12" fill="#7ec87e"/>
+                <circle cx="-16" cy="0" r="8" fill="#9ad89a"/><circle cx="0" cy="0" r="8.5" fill="#9ad89a"/><circle cx="16" cy="0" r="8" fill="#9ad89a"/>
+              </g>
+
+              <!-- sesame -->
+              <ellipse cx="60" cy="140" rx="3" ry="1.6" fill="#3d2010" opacity="0.5" transform="rotate(-30,60,140)"/>
+              <ellipse cx="300" cy="140" rx="3" ry="1.6" fill="#fffaf0" stroke="#d4a96a" stroke-width="0.8" transform="rotate(20,300,140)"/>
             </svg>
           </div>
           <div class="cell-back">
@@ -127,47 +186,60 @@
         </div>
       </button>
 
-      <!-- EXPERIENCE — gyoza dumplings -->
+      <!-- EXPERIENCE — gyoza -->
       <button class="cell cell-exp" onclick="openCell(this,'experience','💼')">
         <div class="cell-inner">
           <div class="cell-front">
-            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="200" height="170" fill="#fffdf8"/>
-              <!-- gyoza 1 (left) -->
-              <g transform="translate(40,105)">
-                <ellipse cx="30" cy="0" rx="32" ry="18" fill="#f5e8d0" stroke="#c8890a" stroke-width="1.5"/>
-                <!-- pleats -->
-                <path d="M4,-4 Q10,-14 16,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M16,-6 Q22,-16 28,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M28,-6 Q34,-16 40,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M40,-4 Q46,-14 52,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <!-- golden bottom -->
-                <ellipse cx="30" cy="10" rx="28" ry="8" fill="#c8890a" opacity="0.35"/>
+            <svg viewBox="0 0 350 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- sushi grass left -->
+              <path d="M0,0 H28 L34,14 L28,28 L34,42 L28,56 L34,70 L28,84 L34,98 L28,112 L34,126 L28,140 L34,150 H0 Z" fill="#6fbf73"/>
+              <path d="M0,0 H14 L18,14 L14,28 L18,42 L14,56 L18,70 L14,84 L18,98 L14,112 L18,126 L14,140 L18,150 H0 Z" fill="#5aab5e"/>
+
+              <!-- dipping sauce dish -->
+              <g transform="translate(290,38)">
+                <ellipse cx="0" cy="4" rx="40" ry="26" fill="#e8d5b0"/>
+                <ellipse cx="0" cy="0" rx="40" ry="26" fill="#fffaf0" stroke="#e2c28c" stroke-width="2"/>
+                <ellipse cx="0" cy="1" rx="30" ry="18" fill="#8b2012"/>
+                <ellipse cx="-8" cy="-5" rx="8" ry="4" fill="#c0392b" opacity="0.6"/>
+                <ellipse cx="6" cy="4" rx="3" ry="1.5" fill="#fffaf0" transform="rotate(-20,6,4)"/>
+                <ellipse cx="-4" cy="9" rx="3" ry="1.5" fill="#fffaf0" transform="rotate(30,-4,9)"/>
+                <circle cx="12" cy="-4" r="2" fill="#7ec87e"/><circle cx="-14" cy="6" r="2" fill="#7ec87e"/>
               </g>
-              <!-- gyoza 2 (center, slightly raised) -->
-              <g transform="translate(72,80)">
-                <ellipse cx="30" cy="0" rx="32" ry="18" fill="#fdf0d8" stroke="#c8890a" stroke-width="1.5"/>
-                <path d="M4,-4 Q10,-14 16,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M16,-6 Q22,-16 28,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M28,-6 Q34,-16 40,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M40,-4 Q46,-14 52,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <ellipse cx="30" cy="10" rx="28" ry="8" fill="#c8890a" opacity="0.35"/>
+
+              <!-- gyoza row (back to front) -->
+              <g transform="translate(300,108)">
+                <ellipse cx="0" cy="0" rx="46" ry="27" fill="#f7ead4" stroke="#d99a1a" stroke-width="2"/>
+                <path d="M-36,-8 Q-28,-24 -20,-8 M-20,-11 Q-12,-27 -4,-11 M-4,-11 Q4,-27 12,-11 M12,-8 Q20,-24 28,-8" fill="none" stroke="#d99a1a" stroke-width="1.8"/>
+                <ellipse cx="0" cy="14" rx="40" ry="10" fill="#d99a1a" opacity="0.4"/>
               </g>
-              <!-- gyoza 3 (right) -->
-              <g transform="translate(104,105)">
-                <ellipse cx="30" cy="0" rx="32" ry="18" fill="#f5e8d0" stroke="#c8890a" stroke-width="1.5"/>
-                <path d="M4,-4 Q10,-14 16,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M16,-6 Q22,-16 28,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M28,-6 Q34,-16 40,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <path d="M40,-4 Q46,-14 52,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
-                <ellipse cx="30" cy="10" rx="28" ry="8" fill="#c8890a" opacity="0.35"/>
+              <g transform="translate(220,102)">
+                <ellipse cx="0" cy="0" rx="46" ry="27" fill="#fbf1de" stroke="#d99a1a" stroke-width="2"/>
+                <path d="M-36,-8 Q-28,-24 -20,-8 M-20,-11 Q-12,-27 -4,-11 M-4,-11 Q4,-27 12,-11 M12,-8 Q20,-24 28,-8" fill="none" stroke="#d99a1a" stroke-width="1.8"/>
+                <ellipse cx="0" cy="14" rx="40" ry="10" fill="#d99a1a" opacity="0.4"/>
               </g>
-              <!-- dipping sauce bowl -->
-              <ellipse cx="100" cy="148" rx="22" ry="10" fill="#8b2012" opacity="0.25"/>
-              <ellipse cx="100" cy="144" rx="18" ry="6" fill="#c0392b" opacity="0.3"/>
-              <!-- dots -->
-              <circle cx="22" cy="50" r="3" fill="#d4a96a" opacity="0.2"/>
-              <circle cx="178" cy="148" r="2" fill="#d4a96a" opacity="0.2"/>
+              <g transform="translate(140,108)">
+                <ellipse cx="0" cy="0" rx="46" ry="27" fill="#f7ead4" stroke="#d99a1a" stroke-width="2"/>
+                <path d="M-36,-8 Q-28,-24 -20,-8 M-20,-11 Q-12,-27 -4,-11 M-4,-11 Q4,-27 12,-11 M12,-8 Q20,-24 28,-8" fill="none" stroke="#d99a1a" stroke-width="1.8"/>
+                <ellipse cx="0" cy="14" rx="40" ry="10" fill="#d99a1a" opacity="0.4"/>
+              </g>
+              <!-- front gyoza with face -->
+              <g transform="translate(78,98)">
+                <ellipse cx="0" cy="0" rx="50" ry="30" fill="#fdf5e6" stroke="#d99a1a" stroke-width="2"/>
+                <path d="M-40,-9 Q-31,-27 -22,-9 M-22,-12 Q-13,-30 -4,-12 M-4,-12 Q5,-30 14,-12 M14,-9 Q23,-27 32,-9" fill="none" stroke="#d99a1a" stroke-width="1.8"/>
+                <ellipse cx="0" cy="16" rx="44" ry="11" fill="#d99a1a" opacity="0.4"/>
+                <circle cx="-10" cy="4" r="2.8" fill="#3d2010"/><circle cx="10" cy="4" r="2.8" fill="#3d2010"/>
+                <path d="M-5,11 Q0,16 5,11" fill="none" stroke="#3d2010" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="-19" cy="10" rx="5.5" ry="3" fill="#ffb3b3" opacity="0.75"/><ellipse cx="19" cy="10" rx="5.5" ry="3" fill="#ffb3b3" opacity="0.75"/>
+              </g>
+
+              <!-- scallion rings -->
+              <circle cx="70" cy="34" r="6" fill="none" stroke="#5aab5e" stroke-width="3"/>
+              <circle cx="120" cy="48" r="5" fill="none" stroke="#7ec87e" stroke-width="3"/>
+              <circle cx="180" cy="30" r="6" fill="none" stroke="#5aab5e" stroke-width="3"/>
+              <!-- sesame -->
+              <ellipse cx="100" cy="24" rx="3" ry="1.6" fill="#fffaf0" stroke="#d4a96a" stroke-width="0.8" transform="rotate(-30,100,24)"/>
+              <ellipse cx="150" cy="60" rx="3" ry="1.6" fill="#3d2010" opacity="0.5" transform="rotate(20,150,60)"/>
+              <ellipse cx="210" cy="56" rx="3" ry="1.6" fill="#fffaf0" stroke="#d4a96a" stroke-width="0.8" transform="rotate(45,210,56)"/>
             </svg>
           </div>
           <div class="cell-back">
@@ -178,64 +250,61 @@
         </div>
       </button>
 
-      <!-- PROJECTS — mushrooms -->
+      <!-- PROJECTS — mushrooms & broccoli -->
       <button class="cell cell-proj" onclick="openCell(this,'projects','🛠️')">
         <div class="cell-inner">
           <div class="cell-front">
-            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="200" height="170" fill="#fffdf8"/>
-              <!-- mushroom 1 (left) -->
-              <g transform="translate(42,130)">
-                <!-- stem -->
-                <rect x="-8" y="-28" width="16" height="32" rx="5" fill="#f2dfc4"/>
-                <!-- spots on cap -->
-                <!-- cap -->
-                <ellipse cx="0" cy="-30" rx="28" ry="22" fill="#c8890a"/>
-                <ellipse cx="0" cy="-38" rx="24" ry="16" fill="#d4a030"/>
-                <!-- white spots -->
-                <circle cx="-8" cy="-40" r="4" fill="white" opacity="0.7"/>
-                <circle cx="8" cy="-36" r="3" fill="white" opacity="0.7"/>
-                <circle cx="0" cy="-28" r="3.5" fill="white" opacity="0.7"/>
-                <!-- gills under cap -->
-                <ellipse cx="0" cy="-22" rx="28" ry="6" fill="#f2dfc4" opacity="0.8"/>
-                <!-- cute face -->
-                <circle cx="-4" cy="-10" r="1.5" fill="#8b5a2b"/>
-                <circle cx="4" cy="-10" r="1.5" fill="#8b5a2b"/>
-                <path d="M-3,-5 Q0,-2 3,-5" fill="none" stroke="#8b5a2b" stroke-width="1.2" stroke-linecap="round"/>
+            <svg viewBox="0 0 350 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- grassy bed -->
+              <ellipse cx="175" cy="146" rx="200" ry="16" fill="#c8e6c8" opacity="0.6"/>
+
+              <!-- mushroom left -->
+              <g transform="translate(62,140)">
+                <rect x="-13" y="-46" width="26" height="50" rx="8" fill="#f6e6cc" stroke="#e2c28c" stroke-width="1.5"/>
+                <path d="M-46,-42 C-46,-82 46,-82 46,-42 Z" fill="#c8890a"/>
+                <path d="M-46,-42 Q0,-30 46,-42 Z" fill="#f2dfc4"/>
+                <circle cx="-16" cy="-62" r="6" fill="#fff3d6"/><circle cx="12" cy="-70" r="4.5" fill="#fff3d6"/><circle cx="22" cy="-52" r="5" fill="#fff3d6"/><circle cx="-4" cy="-50" r="3.5" fill="#fff3d6"/>
+                <circle cx="-6" cy="-24" r="2.4" fill="#3d2010"/><circle cx="6" cy="-24" r="2.4" fill="#3d2010"/>
+                <path d="M-4,-17 Q0,-13 4,-17" fill="none" stroke="#3d2010" stroke-width="1.8" stroke-linecap="round"/>
+                <ellipse cx="-11" cy="-18" rx="4" ry="2.4" fill="#ffb3b3" opacity="0.75"/><ellipse cx="11" cy="-18" rx="4" ry="2.4" fill="#ffb3b3" opacity="0.75"/>
               </g>
-              <!-- mushroom 2 (center, taller) -->
-              <g transform="translate(100,130)">
-                <rect x="-9" y="-36" width="18" height="40" rx="6" fill="#f2dfc4"/>
-                <ellipse cx="0" cy="-38" rx="32" ry="26" fill="#c8890a"/>
-                <ellipse cx="0" cy="-48" rx="27" ry="18" fill="#d4a030"/>
-                <circle cx="-10" cy="-50" r="5" fill="white" opacity="0.7"/>
-                <circle cx="10" cy="-44" r="4" fill="white" opacity="0.7"/>
-                <circle cx="0" cy="-36" r="4.5" fill="white" opacity="0.7"/>
-                <ellipse cx="0" cy="-28" rx="32" ry="7" fill="#f2dfc4" opacity="0.8"/>
-                <circle cx="-4" cy="-14" r="1.8" fill="#8b5a2b"/>
-                <circle cx="4" cy="-14" r="1.8" fill="#8b5a2b"/>
-                <path d="M-4,-8 Q0,-4 4,-8" fill="none" stroke="#8b5a2b" stroke-width="1.3" stroke-linecap="round"/>
+
+              <!-- mushroom center (tall) -->
+              <g transform="translate(158,140)">
+                <rect x="-15" y="-62" width="30" height="66" rx="9" fill="#f6e6cc" stroke="#e2c28c" stroke-width="1.5"/>
+                <path d="M-54,-58 C-54,-108 54,-108 54,-58 Z" fill="#d49a1e"/>
+                <path d="M-54,-58 Q0,-44 54,-58 Z" fill="#f2dfc4"/>
+                <circle cx="-20" cy="-84" r="7" fill="#fff3d6"/><circle cx="14" cy="-92" r="5.5" fill="#fff3d6"/><circle cx="28" cy="-70" r="6" fill="#fff3d6"/><circle cx="-2" cy="-68" r="4" fill="#fff3d6"/><circle cx="-36" cy="-66" r="4" fill="#fff3d6"/>
+                <path d="M-9,-36 Q-6,-40 -3,-36" fill="none" stroke="#3d2010" stroke-width="2" stroke-linecap="round"/>
+                <path d="M3,-36 Q6,-40 9,-36" fill="none" stroke="#3d2010" stroke-width="2" stroke-linecap="round"/>
+                <path d="M-5,-27 Q0,-22 5,-27" fill="none" stroke="#3d2010" stroke-width="1.8" stroke-linecap="round"/>
+                <ellipse cx="-12" cy="-29" rx="4.5" ry="2.6" fill="#ffb3b3" opacity="0.75"/><ellipse cx="12" cy="-29" rx="4.5" ry="2.6" fill="#ffb3b3" opacity="0.75"/>
               </g>
-              <!-- mushroom 3 (right) -->
-              <g transform="translate(160,130)">
-                <rect x="-7" y="-24" width="14" height="28" rx="4" fill="#f2dfc4"/>
-                <ellipse cx="0" cy="-26" rx="24" ry="19" fill="#c8890a"/>
-                <ellipse cx="0" cy="-34" rx="20" ry="14" fill="#d4a030"/>
-                <circle cx="-7" cy="-35" r="3.5" fill="white" opacity="0.7"/>
-                <circle cx="7" cy="-32" r="2.5" fill="white" opacity="0.7"/>
-                <circle cx="0" cy="-25" r="3" fill="white" opacity="0.7"/>
-                <ellipse cx="0" cy="-19" rx="24" ry="5.5" fill="#f2dfc4" opacity="0.8"/>
-                <circle cx="-3" cy="-9" r="1.3" fill="#8b5a2b"/>
-                <circle cx="3" cy="-9" r="1.3" fill="#8b5a2b"/>
-                <path d="M-2,-5 Q0,-2 2,-5" fill="none" stroke="#8b5a2b" stroke-width="1.1" stroke-linecap="round"/>
+
+              <!-- mushroom right (small) -->
+              <g transform="translate(240,140)">
+                <rect x="-11" y="-36" width="22" height="40" rx="7" fill="#f6e6cc" stroke="#e2c28c" stroke-width="1.5"/>
+                <path d="M-38,-34 C-38,-68 38,-68 38,-34 Z" fill="#c8890a"/>
+                <path d="M-38,-34 Q0,-24 38,-34 Z" fill="#f2dfc4"/>
+                <circle cx="-12" cy="-52" r="5" fill="#fff3d6"/><circle cx="12" cy="-56" r="4" fill="#fff3d6"/><circle cx="18" cy="-42" r="3.5" fill="#fff3d6"/>
+                <circle cx="-5" cy="-19" r="2.2" fill="#3d2010"/><circle cx="5" cy="-19" r="2.2" fill="#3d2010"/>
+                <ellipse cx="0" cy="-12" rx="2.5" ry="2" fill="#3d2010"/>
+                <ellipse cx="-9" cy="-13" rx="3.5" ry="2.2" fill="#ffb3b3" opacity="0.75"/><ellipse cx="9" cy="-13" rx="3.5" ry="2.2" fill="#ffb3b3" opacity="0.75"/>
               </g>
-              <!-- grass/ground -->
-              <ellipse cx="42" cy="132" rx="28" ry="6" fill="#c8e6c8" opacity="0.4"/>
-              <ellipse cx="100" cy="132" rx="34" ry="7" fill="#c8e6c8" opacity="0.4"/>
-              <ellipse cx="160" cy="132" rx="26" ry="5.5" fill="#c8e6c8" opacity="0.4"/>
-              <!-- dots -->
-              <circle cx="18" cy="44" r="3" fill="#d4a96a" opacity="0.2"/>
-              <circle cx="182" cy="44" r="2.5" fill="#d4a96a" opacity="0.2"/>
+
+              <!-- broccoli -->
+              <g transform="translate(308,112)">
+                <rect x="-7" y="0" width="14" height="30" rx="5" fill="#a8d8a8"/>
+                <circle cx="-22" cy="-6" r="16" fill="#5aab5e"/><circle cx="22" cy="-6" r="16" fill="#5aab5e"/>
+                <circle cx="0" cy="-22" r="18" fill="#6fbf73"/><circle cx="-12" cy="-10" r="14" fill="#6fbf73"/><circle cx="12" cy="-10" r="14" fill="#6fbf73"/>
+                <circle cx="-8" cy="-22" r="3" fill="#8fd48f"/><circle cx="10" cy="-16" r="2.5" fill="#8fd48f"/><circle cx="-20" cy="-2" r="2.5" fill="#8fd48f"/><circle cx="22" cy="0" r="2.5" fill="#8fd48f"/>
+              </g>
+
+              <!-- sparkles -->
+              <path d="M30,30 l3,-8 3,8 8,3 -8,3 -3,8 -3,-8 -8,-3z" fill="#f4a261" opacity="0.6"/>
+              <path d="M300,24 l2,-6 2,6 6,2 -6,2 -2,6 -2,-6 -6,-2z" fill="#f4a261" opacity="0.5"/>
+              <circle cx="110" cy="20" r="2.5" fill="#d4a96a" opacity="0.4"/>
+              <circle cx="270" cy="40" r="2" fill="#d4a96a" opacity="0.4"/>
             </svg>
           </div>
           <div class="cell-back">
@@ -246,37 +315,38 @@
         </div>
       </button>
 
-      <!-- CONTACT — fried egg with smiley -->
+      <!-- CONTACT — fried egg & tako wiener -->
       <button class="cell cell-contact" onclick="openCell(this,'contact','✉️')">
         <div class="cell-inner">
           <div class="cell-front">
-            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="200" height="170" fill="#fffdf8"/>
-              <!-- egg white (irregular blob) -->
-              <ellipse cx="100" cy="95" rx="62" ry="50" fill="white" stroke="#e8d5b0" stroke-width="1.5"/>
-              <!-- irregular blob bumps -->
-              <ellipse cx="60" cy="85" rx="22" ry="18" fill="white"/>
-              <ellipse cx="140" cy="80" rx="20" ry="16" fill="white"/>
-              <ellipse cx="100" cy="60" rx="28" ry="20" fill="white"/>
-              <!-- second stroke layer for outline -->
-              <path d="M38,95 Q30,70 52,58 Q68,48 88,52 Q100,44 112,50 Q130,44 148,58 Q170,72 162,95 Q172,118 155,130 Q140,145 120,145 Q100,150 80,145 Q60,145 45,130 Q30,115 38,95Z" fill="white" stroke="#e8d5b0" stroke-width="2"/>
-              <!-- yolk -->
-              <circle cx="100" cy="95" r="28" fill="#fbbf24"/>
-              <circle cx="100" cy="95" r="24" fill="#f59e0b"/>
-              <!-- sheen on yolk -->
-              <ellipse cx="92" cy="84" rx="7" ry="5" fill="white" opacity="0.35" transform="rotate(-20,92,84)"/>
-              <!-- smiley face on yolk -->
-              <circle cx="91" cy="91" r="3" fill="#92400e"/>
-              <circle cx="109" cy="91" r="3" fill="#92400e"/>
-              <!-- smile -->
-              <path d="M88,102 Q100,112 112,102" fill="none" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"/>
-              <!-- rosy cheeks -->
-              <ellipse cx="83" cy="101" rx="5" ry="3" fill="#ffb3b3" opacity="0.6"/>
-              <ellipse cx="117" cy="101" rx="5" ry="3" fill="#ffb3b3" opacity="0.6"/>
-              <!-- small hearts floating -->
-              <text x="32" y="55" font-size="14" opacity="0.5">♡</text>
-              <text x="150" y="50" font-size="11" opacity="0.4">♡</text>
-              <text x="160" y="135" font-size="10" opacity="0.3">♡</text>
+            <svg viewBox="0 0 350 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- fried egg -->
+              <path d="M40,80 Q28,40 62,28 Q84,12 112,22 Q132,6 156,18 Q190,10 206,38 Q234,50 224,84 Q236,112 208,128 Q188,146 156,140 Q126,150 100,136 Q66,140 50,116 Q30,104 40,80Z" fill="white" stroke="#e8d5b0" stroke-width="2.5"/>
+              <circle cx="132" cy="80" r="42" fill="#fbbf24"/>
+              <circle cx="132" cy="80" r="37" fill="#f59e0b"/>
+              <ellipse cx="118" cy="64" rx="10" ry="6" fill="white" opacity="0.4" transform="rotate(-25,118,64)"/>
+              <circle cx="120" cy="76" r="3.8" fill="#92400e"/><circle cx="144" cy="76" r="3.8" fill="#92400e"/>
+              <path d="M117,88 Q132,101 147,88" fill="none" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="108" cy="88" rx="7" ry="4" fill="#ffb3b3" opacity="0.7"/><ellipse cx="156" cy="88" rx="7" ry="4" fill="#ffb3b3" opacity="0.7"/>
+              <!-- pepper -->
+              <circle cx="70" cy="60" r="1.5" fill="#3d2010" opacity="0.5"/><circle cx="190" cy="110" r="1.5" fill="#3d2010" opacity="0.5"/><circle cx="90" cy="118" r="1.2" fill="#3d2010" opacity="0.5"/>
+
+              <!-- tako wiener (octopus sausage) -->
+              <g transform="translate(282,74)">
+                <path d="M-24,10 Q-30,40 -22,50 M-8,14 Q-14,44 -6,54 M8,14 Q14,44 6,54 M24,10 Q30,40 22,50" fill="none" stroke="#e05a4a" stroke-width="9" stroke-linecap="round"/>
+                <ellipse cx="0" cy="0" rx="34" ry="30" fill="#ee6b5b"/>
+                <ellipse cx="-12" cy="-14" rx="9" ry="5" fill="white" opacity="0.3" transform="rotate(-30,-12,-14)"/>
+                <circle cx="-11" cy="-2" r="3.5" fill="#3d2010"/><circle cx="11" cy="-2" r="3.5" fill="#3d2010"/>
+                <circle cx="-9.5" cy="-3.5" r="1.2" fill="white"/><circle cx="12.5" cy="-3.5" r="1.2" fill="white"/>
+                <path d="M-5,8 Q0,13 5,8" fill="none" stroke="#3d2010" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="-20" cy="7" rx="6" ry="3.5" fill="#ffb3b3" opacity="0.8"/><ellipse cx="20" cy="7" rx="6" ry="3.5" fill="#ffb3b3" opacity="0.8"/>
+              </g>
+
+              <!-- hearts -->
+              <path d="M250,28 c-4,-8 -16,-4 -12,6 l12,12 12,-12 c4,-10 -8,-14 -12,-6z" fill="#ffb3b3" opacity="0.85"/>
+              <path d="M330,120 c-3,-6 -12,-3 -9,4.5 l9,9 9,-9 c3,-7.5 -6,-10.5 -9,-4.5z" fill="#ffb3b3" opacity="0.7"/>
+              <path d="M22,128 c-2.5,-5 -10,-2.5 -7.5,3.75 l7.5,7.5 7.5,-7.5 c2.5,-6.25 -5,-8.75 -7.5,-3.75z" fill="#ffb3b3" opacity="0.6"/>
+              <path d="M330,64 l2,-6 2,6 6,2 -6,2 -2,6 -2,-6 -6,-2z" fill="#f4a261" opacity="0.5"/>
             </svg>
           </div>
           <div class="cell-back">
