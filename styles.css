@@ -4,42 +4,51 @@
    ════════════════════════════════════════════════ */
 
 :root {
-  /* light mode pastels */
-  --bg:        #fdf6f9;   /* cream pink */
-  --bg-soft:   #fce8ef;
-  --card:      #ffffffcc;
-  --card-edge: #f5d6e2;
-  --text:      #5a4a5e;   /* soft plum */
-  --muted:     #9a8aa0;
+  /* warm amber bento palette */
+  --bg:        #fef9f0;   /* warm cream */
+  --bg-soft:   #fde8c8;   /* light amber */
+  --card:      #fffff8cc;
+  --card-edge: #f0d9a8;
+  --text:      #44302a;   /* warm dark brown */
+  --muted:     #92664a;
 
-  /* heading accent colours (different per word!) */
-  --c1: #d896a8;  /* rose */
+  --c1: #c27803;  /* amber */
   --c2: #8aafc9;  /* sky blue */
   --c3: #b89dd1;  /* lavender */
   --c4: #8fc6a8;  /* mint */
-  --c5: #e8b86b;  /* honey */
+  --c5: #d97706;  /* deep amber */
 
-  --shadow: 0 8px 32px rgba(216, 150, 168, 0.15);
-  --shadow-lg: 0 20px 60px rgba(184, 157, 209, 0.2);
+  --shadow:    0 8px 32px rgba(194, 120, 3, 0.13);
+  --shadow-lg: 0 20px 60px rgba(194, 120, 3, 0.18);
   --radius: 22px;
+
+  --bento-wood:     #d97706;
+  --bento-cell-bg:  #fef9f0;
+  --bento-label:    #78350f;
+  --bento-sub:      #92400e;
 }
 
 [data-theme="dark"] {
-  --bg:        #1f1a2e;   /* deep plum night */
-  --bg-soft:   #2a2440;
-  --card:      #2e2745d9;
-  --card-edge: #3d3458;
-  --text:      #efe1ec;   /* soft pink cream */
-  --muted:     #a89bb8;
+  --bg:        #1a1008;   /* deep dark amber */
+  --bg-soft:   #251808;
+  --card:      #2e1d08d9;
+  --card-edge: #4a3015;
+  --text:      #f5e6d0;   /* warm cream */
+  --muted:     #c4a882;
 
-  --c1: #f5b3c4;  /* brighter rose */
+  --c1: #f0a830;  /* golden amber */
   --c2: #a8d0eb;  /* soft sky */
   --c3: #d4bff0;  /* lavender */
   --c4: #b3e0c4;  /* mint */
   --c5: #ffd9a0;  /* honey */
 
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --shadow:    0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  --bento-wood:    #422006;
+  --bento-cell-bg: #1c1008;
+  --bento-label:   #fcd34d;
+  --bento-sub:     #fbbf24;
 }
 
 /* ───── base ───── */
@@ -57,6 +66,10 @@ body {
     radial-gradient(circle at 85% 75%, var(--bg-soft) 0%, transparent 45%);
   background-attachment: fixed;
   transition: background 0.5s ease, color 0.3s ease;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cline x1='4' y1='34' x2='30' y2='4' stroke='%2392400e' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='11' y1='34' x2='34' y2='7' stroke='%23c4a882' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") 30 4, auto;
+}
+a, button, [role="button"], input[type="button"], input[type="submit"], label, .ctrl-btn, .bento-cell, .modal-close {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cline x1='4' y1='34' x2='22' y2='4' stroke='%2392400e' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='14' y1='34' x2='28' y2='4' stroke='%23c4a882' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") 22 4, pointer;
 }
 
 h1, h2, h3 {
@@ -146,12 +159,12 @@ img { max-width: 100%; display: block; }
 .nav .logo {
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
-  color: var(--c1);
+  color: var(--bento-label);
   font-weight: 600;
   letter-spacing: -0.02em;
   font-style: normal;
 }
-.nav .logo .c2 { color: var(--c2); font-style: normal; }
+.nav .logo .c2 { color: var(--bento-sub); font-style: normal; }
 .nav .logo .logo-mah { font-style: italic; }
 .nav ul {
   display: flex; gap: 1.5rem;
@@ -726,12 +739,23 @@ footer {
   padding: 1.5rem 1.5rem 3rem;
 }
 
-.bento-hint {
-  font-size: 0.8rem;
-  color: var(--muted);
+.bento-title-wrap {
+  text-align: center;
   margin-bottom: 0.9rem;
-  letter-spacing: 0.05em;
+}
+.bento-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
   font-style: italic;
+  color: var(--bento-sub);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+.bento-hint {
+  font-size: 0.75rem;
+  color: var(--bento-sub);
+  opacity: 0.55;
+  letter-spacing: 0.06em;
 }
 
 .bento-box {
@@ -753,8 +777,7 @@ footer {
 
 /* ───── base cell ───── */
 .bento-cell {
-  background: var(--card);
-  backdrop-filter: blur(8px);
+  background: var(--bento-cell-bg);
   border-radius: 14px;
   position: relative;
   overflow: hidden;
@@ -763,7 +786,6 @@ footer {
 /* clickable cells */
 button.bento-cell {
   border: none;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -772,11 +794,11 @@ button.bento-cell {
   text-align: center;
   padding: 1.5rem 1rem;
   font-family: 'Quicksand', sans-serif;
-  color: var(--text);
+  color: var(--bento-label);
   transition: background 0.2s;
   width: 100%;
 }
-button.bento-cell:hover { background: var(--bg-soft); }
+button.bento-cell:hover { background: color-mix(in srgb, var(--bento-wood) 8%, var(--bento-cell-bg)); }
 
 /* colored top accent stripe per cell */
 button.bento-cell::before {
@@ -786,12 +808,12 @@ button.bento-cell::before {
   height: 3px;
   border-radius: 14px 14px 0 0;
 }
-.cell-about::before     { background: var(--c2); }
-.cell-currently::before { background: var(--c1); }
-.cell-education::before { background: var(--c3); }
-.cell-experience::before{ background: var(--c4); }
-.cell-projects::before  { background: linear-gradient(90deg, var(--c1), var(--c3)); }
-.cell-contact::before   { background: var(--c5); }
+.cell-about::before     { background: #8aafc9; }
+.cell-currently::before { background: var(--bento-wood); }
+.cell-education::before { background: #b89dd1; }
+.cell-experience::before{ background: #8fc6a8; }
+.cell-projects::before  { background: linear-gradient(90deg, var(--bento-wood), #e8b86b); }
+.cell-contact::before   { background: #e8b86b; }
 
 /* grid area assignments */
 .cell-hero      { grid-area: hero; }
@@ -812,11 +834,12 @@ button.bento-cell::before {
   font-family: 'Fraunces', serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--c1);
+  color: var(--bento-label);
 }
 .cell-sub {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--bento-sub);
+  opacity: 0.7;
   line-height: 1.4;
 }
 
@@ -835,6 +858,7 @@ button.bento-cell.picked .cell-emoji {
   justify-content: center;
   gap: 0.75rem;
   text-align: center;
+  background: var(--bento-cell-bg);
 }
 
 .hero-photo {
@@ -861,15 +885,19 @@ button.bento-cell.picked .cell-emoji {
   font-weight: 600;
   line-height: 1.1;
   margin: 0;
+  color: var(--bento-label);
 }
+.bento-name .c1 { color: var(--bento-label); }
+.bento-name .c2 { color: var(--bento-sub); font-style: italic; }
 .bento-tagline {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: var(--bento-sub);
   margin: 0;
 }
 .bento-sub {
   font-size: 0.76rem;
-  color: var(--muted);
+  color: var(--bento-sub);
+  opacity: 0.7;
   font-style: italic;
   margin: 0;
   line-height: 1.5;
