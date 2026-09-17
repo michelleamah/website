@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles-v4.css" />
+  <link rel="stylesheet" href="styles-v7.css" />
 </head>
 <body>
 
@@ -31,6 +31,15 @@
   </div>
 
   <p class="pg-title">michelle's bento ♡</p>
+  <nav class="pg-links" aria-label="Links">
+    <a href="assets/Michelle-Mah-Resume.pdf" target="_blank" rel="noopener">resume</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener">linkedin</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://github.com/michelleamah" target="_blank" rel="noopener">github</a>
+    <span aria-hidden="true">·</span>
+    <a href="mailto:michelleannabelmah@gmail.com">email</a>
+  </nav>
 
   <div class="bento-layout">
     <div class="bento">
@@ -39,7 +48,8 @@
         <span class="hero-emoji" aria-hidden="true">🍱</span>
         <div>
           <p class="hero-name">hi, i'm michelle</p>
-          <p class="hero-sub">mssm @ cmu · solutions engineer → product · sf bay area</p>
+          <p class="hero-sub">m.s. software management @ carnegie mellon · ex-salesforce solutions engineer · sf bay area</p>
+          <p class="hero-cta">seeking summer 2027 product management &amp; solutions engineering internships ✦</p>
         </div>
       </button>
 
@@ -47,24 +57,28 @@
         <span class="cell-emoji" aria-hidden="true">🎓</span>
         <span class="cell-label">education</span>
         <span class="cell-sub">cmu · queen's · brainstation</span>
+        <span class="cell-stat">first-class honours · 7% admit smith commerce</span>
       </button>
 
       <button class="cell cell-exp" onclick="openCell(this,'experience','💼')">
         <span class="cell-emoji" aria-hidden="true">💼</span>
         <span class="cell-label">experience</span>
         <span class="cell-sub">organimi · salesforce · daebak</span>
+        <span class="cell-stat">$4.7m expansion acv · #1 gtm team in north america</span>
       </button>
 
       <button class="cell cell-proj" onclick="openCell(this,'projects','🛠️')">
         <span class="cell-emoji" aria-hidden="true">🛠️</span>
         <span class="cell-label">projects</span>
         <span class="cell-sub">bookmate · website · bandsite</span>
+        <span class="cell-stat">react · node · mysql · vanilla js</span>
       </button>
 
       <button class="cell cell-contact" onclick="openCell(this,'contact','✉️')">
         <span class="cell-emoji" aria-hidden="true">✉️</span>
         <span class="cell-label">say hi ♡</span>
         <span class="cell-sub">let's connect!</span>
+        <span class="cell-stat">michelleannabelmah@gmail.com</span>
       </button>
 
     </div>
@@ -84,6 +98,6 @@
     <p>made with ♡ &amp; lots of matcha · © <span id="year"></span> michelle mah</p>
   </footer>
 
-  <script src="script-v4.js"></script>
+  <script src="script-v7.js"></script>
 </body>
 </html>
