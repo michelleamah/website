@@ -54,12 +54,8 @@
     </button>
   </div>
 
-  <!-- ───── chopstick layer (fixed, animated) ───── -->
-  <div class="chop-layer" id="chopLayer" aria-hidden="true">
-    <span class="chop-emoji" id="chopEmoji"></span>
-    <div class="chop chop-a" id="chopA"></div>
-    <div class="chop chop-b" id="chopB"></div>
-  </div>
+  <!-- ───── floating emoji (cursor pickup) ───── -->
+  <span class="chop-emoji" id="chopEmoji" aria-hidden="true"></span>
 
   <!-- ───── modal overlay ───── -->
   <div class="bento-overlay" id="bentoOverlay">
@@ -109,42 +105,42 @@
       </div>
 
       <!-- about -->
-      <button class="bento-cell cell-about" data-section="about" onclick="openCell(this)">
+      <button class="bento-cell cell-about" data-section="about" onclick="openCell(event, this)">
         <span class="cell-emoji" aria-hidden="true">👋</span>
         <span class="cell-label">about me</span>
         <span class="cell-sub">hi, i'm michelle!</span>
       </button>
 
       <!-- currently -->
-      <button class="bento-cell cell-currently" data-section="currently" onclick="openCell(this)">
+      <button class="bento-cell cell-currently" data-section="currently" onclick="openCell(event, this)">
         <span class="cell-emoji" aria-hidden="true">📍</span>
         <span class="cell-label">currently</span>
         <span class="cell-sub">sf bay area · cmu · 2027</span>
       </button>
 
       <!-- education -->
-      <button class="bento-cell cell-education" data-section="education" onclick="openCell(this)">
+      <button class="bento-cell cell-education" data-section="education" onclick="openCell(event, this)">
         <span class="cell-emoji" aria-hidden="true">🎓</span>
         <span class="cell-label">education</span>
         <span class="cell-sub">cmu · queen's · brainstation</span>
       </button>
 
       <!-- experience -->
-      <button class="bento-cell cell-experience" data-section="experience" onclick="openCell(this)">
+      <button class="bento-cell cell-experience" data-section="experience" onclick="openCell(event, this)">
         <span class="cell-emoji" aria-hidden="true">💼</span>
         <span class="cell-label">experience</span>
         <span class="cell-sub">organimi · salesforce · daebak</span>
       </button>
 
       <!-- projects -->
-      <button class="bento-cell cell-projects" data-section="projects" onclick="openCell(this)">
+      <button class="bento-cell cell-projects" data-section="projects" onclick="openCell(event, this)">
         <span class="cell-emoji" aria-hidden="true">🛠️</span>
         <span class="cell-label">projects</span>
         <span class="cell-sub">bookmate · website · bandsite</span>
       </button>
 
       <!-- contact -->
-      <button class="bento-cell cell-contact" data-section="contact" onclick="openCell(this)">
+      <button class="bento-cell cell-contact" data-section="contact" onclick="openCell(event, this)">
         <span class="cell-emoji" aria-hidden="true">✉️</span>
         <span class="cell-label">say hi ♡</span>
         <span class="cell-sub">let's connect!</span>

@@ -449,19 +449,15 @@ function initBento() {
   });
 }
 
-let _lastPickedCell = null;
-
-function openCell(cell) {
+function openCell(event, cell) {
   const section = cell.dataset.section;
   const emojiEl = cell.querySelector('.cell-emoji');
   const emoji = emojiEl ? emojiEl.textContent : '';
 
-  _lastPickedCell = cell;
   cell.classList.add('picked');
 
-  animateChopsticksTo(cell, emoji, () => {
+  animateCursorPickup(event.clientX, event.clientY, emoji, () => {
     cell.classList.remove('picked');
-    _lastPickedCell = null;
     showBentoModal(section);
   });
 }
@@ -470,63 +466,42 @@ function openSection(section) {
   showBentoModal(section);
 }
 
-function animateChopsticksTo(cell, emoji, callback) {
-  const layer  = document.getElementById('chopLayer');
-  const emojiEl = document.getElementById('chopEmoji');
-  const chopA  = document.getElementById('chopA');
-  const chopB  = document.getElementById('chopB');
+function animateCursorPickup(x, y, emoji, callback) {
+  const floater = document.getElementById('chopEmoji');
 
-  const rect = cell.getBoundingClientRect();
-  const cx = rect.left + rect.width / 2;
-  const cy = rect.top  + rect.height / 2;
-
-  layer.style.display = 'block';
-
-  // snap chopsticks just above the cell with no transition first
-  chopA.style.transition = 'none';
-  chopB.style.transition = 'none';
-  chopA.style.left = (cx - 12) + 'px';
-  chopA.style.top  = (cy - 96) + 'px';
-  chopB.style.left = (cx +  6) + 'px';
-  chopB.style.top  = (cy - 96) + 'px';
-  chopA.style.transform = 'rotate(-15deg)';
-  chopB.style.transform = 'rotate(15deg)';
-
-  // show emoji at cell center
-  emojiEl.textContent = emoji;
-  emojiEl.style.left = (cx - 14) + 'px';
-  emojiEl.style.top  = (cy - 14) + 'px';
-  emojiEl.style.opacity = '0';
+  // place emoji at cursor tip, invisible and scaled down
+  floater.style.transition = 'none';
+  floater.style.left   = (x - 14) + 'px';
+  floater.style.top    = y + 'px';
+  floater.style.transform = 'scale(0.4) translateY(0px)';
+  floater.style.opacity = '0';
+  floater.textContent  = emoji;
 
   requestAnimationFrame(() => {
-    // re-enable transitions
-    chopA.style.transition = '';
-    chopB.style.transition = '';
+    // pop in with a slight bounce
+    floater.style.transition = 'opacity 0.12s ease, transform 0.22s cubic-bezier(.34,1.56,.64,1)';
+    requestAnimationFrame(() => {
+      floater.style.opacity   = '1';
+      floater.style.transform = 'scale(1.2) translateY(0px)';
+    });
 
-    // close chopsticks and float emoji
+    // settle scale, then float upward
     setTimeout(() => {
-      emojiEl.style.opacity = '1';
-      chopA.style.transform = 'rotate(-4deg)';
-      chopB.style.transform = 'rotate(4deg)';
-    }, 60);
-
-    // lift emoji upward
-    setTimeout(() => {
-      emojiEl.style.top = (cy - 58) + 'px';
+      floater.style.transition = 'transform 0.32s cubic-bezier(.25,.46,.45,.94)';
+      floater.style.transform  = 'scale(1) translateY(-52px)';
     }, 200);
 
-    // fade out and trigger callback
+    // fade out
     setTimeout(() => {
-      emojiEl.style.opacity = '0';
-    }, 400);
+      floater.style.transition = 'opacity 0.18s ease';
+      floater.style.opacity    = '0';
+    }, 420);
 
+    // done
     setTimeout(() => {
-      layer.style.display = 'none';
-      // reset chops
-      chopA.style.transform = 'rotate(-15deg)';
-      chopB.style.transform = 'rotate(15deg)';
+      floater.style.transform = 'scale(0.4) translateY(0px)';
       callback();
-    }, 540);
+    }, 560);
   });
 }
 

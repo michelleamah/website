@@ -909,38 +909,15 @@ button.bento-cell.picked .cell-emoji {
   flex-wrap: wrap;
 }
 
-/* ───── chopstick layer ───── */
-.chop-layer {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 999;
-  display: none;
-}
-.chop {
-  position: absolute;
-  width: 5px;
-  height: 84px;
-  background: linear-gradient(180deg, #92400e 0%, #c4a882 100%);
-  border-radius: 3px;
-  transform-origin: bottom center;
-  transition:
-    left   0.38s cubic-bezier(.34, 1.56, .64, 1),
-    top    0.38s cubic-bezier(.34, 1.56, .64, 1),
-    transform 0.25s ease;
-}
-.chop-a { transform: rotate(-15deg); }
-.chop-b { transform: rotate(15deg); }
+/* ───── cursor pickup emoji floater ───── */
 .chop-emoji {
-  position: absolute;
-  font-size: 1.5rem;
+  position: fixed;
+  font-size: 1.6rem;
   line-height: 1;
   opacity: 0;
   pointer-events: none;
-  transition:
-    opacity 0.2s ease,
-    top 0.38s cubic-bezier(.34, 1.56, .64, 1);
+  z-index: 9999;
+  will-change: transform, opacity, top;
 }
 
 /* ───── modal overlay ───── */
