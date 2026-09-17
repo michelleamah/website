@@ -200,12 +200,17 @@ body {
 }
 
 /* ── text inside back ── */
+.cell-back,
+.cell-back * {
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+}
 .hero-emoji { font-size: 2.1rem; line-height: 1; flex-shrink: 0; }
-.hero-name  { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 600; color: var(--brown); line-height: 1.15; }
-.hero-sub   { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0.02em; line-height: 1.5; }
+.hero-name  { font-size: 1.3rem; font-weight: 700; color: var(--brown); line-height: 1.2; }
+.hero-sub   { font-size: 0.8rem; font-weight: 500; color: var(--muted); margin-top: 0.2rem; line-height: 1.5; }
 .cell-emoji { font-size: 2.1rem; line-height: 1; flex: 1; display: flex; align-items: flex-start; }
-.cell-label { font-size: 1rem; font-weight: 700; color: var(--amber); letter-spacing: 0.01em; }
-.cell-sub   { font-size: 0.68rem; color: var(--muted); margin-top: 0.15rem; letter-spacing: 0.02em; }
+.cell-label { font-size: 1.1rem; font-weight: 700; color: var(--amber); }
+.cell-sub   { font-size: 0.8rem; font-weight: 500; color: var(--muted); margin-top: 0.15rem; }
 
 .cell.picked .cell-emoji,
 .cell.picked .hero-emoji {
