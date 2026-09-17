@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles-v4.css" />
+  <link rel="stylesheet" href="styles-v5.css" />
 </head>
 <body>
 
@@ -35,36 +35,256 @@
   <div class="bento-layout">
     <div class="bento">
 
+      <!-- HERO — onigiri trio -->
       <button class="cell cell-hero" onclick="openCell(this,'about','🍱')">
-        <span class="hero-emoji" aria-hidden="true">🍱</span>
-        <div>
-          <p class="hero-name">hi, i'm michelle</p>
-          <p class="hero-sub">mssm @ cmu · solutions engineer → product · sf bay area</p>
+        <div class="cell-inner">
+          <div class="cell-front">
+            <svg viewBox="0 0 420 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- subtle grid pattern on back -->
+              <rect width="420" height="110" fill="#fffdf8"/>
+              <!-- onigiri 1 -->
+              <g transform="translate(90,82)">
+                <path d="M0,-62 C-28,-62 -42,-30 -42,0 L42,0 C42,-30 28,-62 0,-62 Z" fill="#fff8ee" stroke="#d4a96a" stroke-width="2"/>
+                <rect x="-42" y="-16" width="84" height="22" rx="3" fill="#2d1a0e"/>
+                <ellipse cx="0" cy="-36" rx="7" ry="6" fill="#ffb3b3" opacity="0.7"/>
+                <circle cx="-14" cy="-52" r="2" fill="#d4a96a" opacity="0.5"/>
+                <circle cx="14" cy="-50" r="1.5" fill="#d4a96a" opacity="0.5"/>
+              </g>
+              <!-- onigiri 2 (center, slightly larger) -->
+              <g transform="translate(210,82)">
+                <path d="M0,-66 C-30,-66 -46,-32 -46,0 L46,0 C46,-32 30,-66 0,-66 Z" fill="#fff8ee" stroke="#d4a96a" stroke-width="2"/>
+                <rect x="-46" y="-18" width="92" height="24" rx="3" fill="#2d1a0e"/>
+                <ellipse cx="0" cy="-40" rx="8" ry="7" fill="#e8a87c" opacity="0.8"/>
+                <circle cx="-16" cy="-55" r="2" fill="#d4a96a" opacity="0.5"/>
+                <circle cx="16" cy="-53" r="1.5" fill="#d4a96a" opacity="0.5"/>
+              </g>
+              <!-- onigiri 3 -->
+              <g transform="translate(330,82)">
+                <path d="M0,-62 C-28,-62 -42,-30 -42,0 L42,0 C42,-30 28,-62 0,-62 Z" fill="#fff8ee" stroke="#d4a96a" stroke-width="2"/>
+                <rect x="-42" y="-16" width="84" height="22" rx="3" fill="#2d1a0e"/>
+                <ellipse cx="0" cy="-36" rx="7" ry="6" fill="#a8d8a8" opacity="0.7"/>
+                <circle cx="-13" cy="-52" r="2" fill="#d4a96a" opacity="0.5"/>
+                <circle cx="13" cy="-50" r="1.5" fill="#d4a96a" opacity="0.5"/>
+              </g>
+              <!-- little dots for decoration -->
+              <circle cx="40" cy="20" r="3" fill="#d4a96a" opacity="0.2"/>
+              <circle cx="380" cy="85" r="2" fill="#d4a96a" opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="cell-back">
+            <span class="hero-emoji" aria-hidden="true">🍱</span>
+            <div>
+              <p class="hero-name">hi, i'm michelle</p>
+              <p class="hero-sub">mssm @ cmu · solutions engineer → product · sf bay area</p>
+            </div>
+          </div>
         </div>
       </button>
 
+      <!-- EDUCATION — tamagoyaki slices -->
       <button class="cell cell-edu" onclick="openCell(this,'education','🎓')">
-        <span class="cell-emoji" aria-hidden="true">🎓</span>
-        <span class="cell-label">education</span>
-        <span class="cell-sub">cmu · queen's · brainstation</span>
+        <div class="cell-inner">
+          <div class="cell-front">
+            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="170" fill="#fffdf8"/>
+              <!-- tamagoyaki log - side view showing layers -->
+              <!-- slice 1 (back) -->
+              <g transform="translate(58,110)">
+                <rect x="0" y="0" width="52" height="38" rx="8" fill="#f5c842" stroke="#c8890a" stroke-width="1.5"/>
+                <rect x="4" y="7" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+                <rect x="4" y="17" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+                <rect x="4" y="27" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+              </g>
+              <!-- slice 2 (middle) -->
+              <g transform="translate(76,88)">
+                <rect x="0" y="0" width="52" height="38" rx="8" fill="#f8d45c" stroke="#c8890a" stroke-width="1.5"/>
+                <rect x="4" y="7" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+                <rect x="4" y="17" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+                <rect x="4" y="27" width="44" height="6" rx="2" fill="#f0b429" opacity="0.6"/>
+              </g>
+              <!-- slice 3 (front) -->
+              <g transform="translate(94,66)">
+                <rect x="0" y="0" width="52" height="38" rx="8" fill="#fce97a" stroke="#c8890a" stroke-width="1.5"/>
+                <rect x="4" y="7" width="44" height="6" rx="2" fill="#f5c842" opacity="0.7"/>
+                <rect x="4" y="17" width="44" height="6" rx="2" fill="#f5c842" opacity="0.7"/>
+                <rect x="4" y="27" width="44" height="6" rx="2" fill="#f5c842" opacity="0.7"/>
+                <!-- chopstick holes -->
+                <circle cx="10" cy="19" r="3" fill="#c8890a" opacity="0.4"/>
+              </g>
+              <!-- little green garnish -->
+              <ellipse cx="154" cy="130" rx="10" ry="5" fill="#7ec87e" opacity="0.8" transform="rotate(-20,154,130)"/>
+              <ellipse cx="160" cy="124" rx="8" ry="4" fill="#5aab5a" opacity="0.7" transform="rotate(-25,160,124)"/>
+              <!-- dots -->
+              <circle cx="30" cy="140" r="3" fill="#d4a96a" opacity="0.2"/>
+              <circle cx="170" cy="40" r="2.5" fill="#d4a96a" opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="cell-back">
+            <span class="cell-emoji" aria-hidden="true">🎓</span>
+            <span class="cell-label">education</span>
+            <span class="cell-sub">cmu · queen's · brainstation</span>
+          </div>
+        </div>
       </button>
 
+      <!-- EXPERIENCE — gyoza dumplings -->
       <button class="cell cell-exp" onclick="openCell(this,'experience','💼')">
-        <span class="cell-emoji" aria-hidden="true">💼</span>
-        <span class="cell-label">experience</span>
-        <span class="cell-sub">organimi · salesforce · daebak</span>
+        <div class="cell-inner">
+          <div class="cell-front">
+            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="170" fill="#fffdf8"/>
+              <!-- gyoza 1 (left) -->
+              <g transform="translate(40,105)">
+                <ellipse cx="30" cy="0" rx="32" ry="18" fill="#f5e8d0" stroke="#c8890a" stroke-width="1.5"/>
+                <!-- pleats -->
+                <path d="M4,-4 Q10,-14 16,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M16,-6 Q22,-16 28,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M28,-6 Q34,-16 40,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M40,-4 Q46,-14 52,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <!-- golden bottom -->
+                <ellipse cx="30" cy="10" rx="28" ry="8" fill="#c8890a" opacity="0.35"/>
+              </g>
+              <!-- gyoza 2 (center, slightly raised) -->
+              <g transform="translate(72,80)">
+                <ellipse cx="30" cy="0" rx="32" ry="18" fill="#fdf0d8" stroke="#c8890a" stroke-width="1.5"/>
+                <path d="M4,-4 Q10,-14 16,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M16,-6 Q22,-16 28,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M28,-6 Q34,-16 40,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M40,-4 Q46,-14 52,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <ellipse cx="30" cy="10" rx="28" ry="8" fill="#c8890a" opacity="0.35"/>
+              </g>
+              <!-- gyoza 3 (right) -->
+              <g transform="translate(104,105)">
+                <ellipse cx="30" cy="0" rx="32" ry="18" fill="#f5e8d0" stroke="#c8890a" stroke-width="1.5"/>
+                <path d="M4,-4 Q10,-14 16,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M16,-6 Q22,-16 28,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M28,-6 Q34,-16 40,-6" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <path d="M40,-4 Q46,-14 52,-4" fill="none" stroke="#c8890a" stroke-width="1.2"/>
+                <ellipse cx="30" cy="10" rx="28" ry="8" fill="#c8890a" opacity="0.35"/>
+              </g>
+              <!-- dipping sauce bowl -->
+              <ellipse cx="100" cy="148" rx="22" ry="10" fill="#8b2012" opacity="0.25"/>
+              <ellipse cx="100" cy="144" rx="18" ry="6" fill="#c0392b" opacity="0.3"/>
+              <!-- dots -->
+              <circle cx="22" cy="50" r="3" fill="#d4a96a" opacity="0.2"/>
+              <circle cx="178" cy="148" r="2" fill="#d4a96a" opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="cell-back">
+            <span class="cell-emoji" aria-hidden="true">💼</span>
+            <span class="cell-label">experience</span>
+            <span class="cell-sub">organimi · salesforce · daebak</span>
+          </div>
+        </div>
       </button>
 
+      <!-- PROJECTS — mushrooms -->
       <button class="cell cell-proj" onclick="openCell(this,'projects','🛠️')">
-        <span class="cell-emoji" aria-hidden="true">🛠️</span>
-        <span class="cell-label">projects</span>
-        <span class="cell-sub">bookmate · website · bandsite</span>
+        <div class="cell-inner">
+          <div class="cell-front">
+            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="170" fill="#fffdf8"/>
+              <!-- mushroom 1 (left) -->
+              <g transform="translate(42,130)">
+                <!-- stem -->
+                <rect x="-8" y="-28" width="16" height="32" rx="5" fill="#f2dfc4"/>
+                <!-- spots on cap -->
+                <!-- cap -->
+                <ellipse cx="0" cy="-30" rx="28" ry="22" fill="#c8890a"/>
+                <ellipse cx="0" cy="-38" rx="24" ry="16" fill="#d4a030"/>
+                <!-- white spots -->
+                <circle cx="-8" cy="-40" r="4" fill="white" opacity="0.7"/>
+                <circle cx="8" cy="-36" r="3" fill="white" opacity="0.7"/>
+                <circle cx="0" cy="-28" r="3.5" fill="white" opacity="0.7"/>
+                <!-- gills under cap -->
+                <ellipse cx="0" cy="-22" rx="28" ry="6" fill="#f2dfc4" opacity="0.8"/>
+                <!-- cute face -->
+                <circle cx="-4" cy="-10" r="1.5" fill="#8b5a2b"/>
+                <circle cx="4" cy="-10" r="1.5" fill="#8b5a2b"/>
+                <path d="M-3,-5 Q0,-2 3,-5" fill="none" stroke="#8b5a2b" stroke-width="1.2" stroke-linecap="round"/>
+              </g>
+              <!-- mushroom 2 (center, taller) -->
+              <g transform="translate(100,130)">
+                <rect x="-9" y="-36" width="18" height="40" rx="6" fill="#f2dfc4"/>
+                <ellipse cx="0" cy="-38" rx="32" ry="26" fill="#c8890a"/>
+                <ellipse cx="0" cy="-48" rx="27" ry="18" fill="#d4a030"/>
+                <circle cx="-10" cy="-50" r="5" fill="white" opacity="0.7"/>
+                <circle cx="10" cy="-44" r="4" fill="white" opacity="0.7"/>
+                <circle cx="0" cy="-36" r="4.5" fill="white" opacity="0.7"/>
+                <ellipse cx="0" cy="-28" rx="32" ry="7" fill="#f2dfc4" opacity="0.8"/>
+                <circle cx="-4" cy="-14" r="1.8" fill="#8b5a2b"/>
+                <circle cx="4" cy="-14" r="1.8" fill="#8b5a2b"/>
+                <path d="M-4,-8 Q0,-4 4,-8" fill="none" stroke="#8b5a2b" stroke-width="1.3" stroke-linecap="round"/>
+              </g>
+              <!-- mushroom 3 (right) -->
+              <g transform="translate(160,130)">
+                <rect x="-7" y="-24" width="14" height="28" rx="4" fill="#f2dfc4"/>
+                <ellipse cx="0" cy="-26" rx="24" ry="19" fill="#c8890a"/>
+                <ellipse cx="0" cy="-34" rx="20" ry="14" fill="#d4a030"/>
+                <circle cx="-7" cy="-35" r="3.5" fill="white" opacity="0.7"/>
+                <circle cx="7" cy="-32" r="2.5" fill="white" opacity="0.7"/>
+                <circle cx="0" cy="-25" r="3" fill="white" opacity="0.7"/>
+                <ellipse cx="0" cy="-19" rx="24" ry="5.5" fill="#f2dfc4" opacity="0.8"/>
+                <circle cx="-3" cy="-9" r="1.3" fill="#8b5a2b"/>
+                <circle cx="3" cy="-9" r="1.3" fill="#8b5a2b"/>
+                <path d="M-2,-5 Q0,-2 2,-5" fill="none" stroke="#8b5a2b" stroke-width="1.1" stroke-linecap="round"/>
+              </g>
+              <!-- grass/ground -->
+              <ellipse cx="42" cy="132" rx="28" ry="6" fill="#c8e6c8" opacity="0.4"/>
+              <ellipse cx="100" cy="132" rx="34" ry="7" fill="#c8e6c8" opacity="0.4"/>
+              <ellipse cx="160" cy="132" rx="26" ry="5.5" fill="#c8e6c8" opacity="0.4"/>
+              <!-- dots -->
+              <circle cx="18" cy="44" r="3" fill="#d4a96a" opacity="0.2"/>
+              <circle cx="182" cy="44" r="2.5" fill="#d4a96a" opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="cell-back">
+            <span class="cell-emoji" aria-hidden="true">🛠️</span>
+            <span class="cell-label">projects</span>
+            <span class="cell-sub">bookmate · website · bandsite</span>
+          </div>
+        </div>
       </button>
 
+      <!-- CONTACT — fried egg with smiley -->
       <button class="cell cell-contact" onclick="openCell(this,'contact','✉️')">
-        <span class="cell-emoji" aria-hidden="true">✉️</span>
-        <span class="cell-label">say hi ♡</span>
-        <span class="cell-sub">let's connect!</span>
+        <div class="cell-inner">
+          <div class="cell-front">
+            <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="170" fill="#fffdf8"/>
+              <!-- egg white (irregular blob) -->
+              <ellipse cx="100" cy="95" rx="62" ry="50" fill="white" stroke="#e8d5b0" stroke-width="1.5"/>
+              <!-- irregular blob bumps -->
+              <ellipse cx="60" cy="85" rx="22" ry="18" fill="white"/>
+              <ellipse cx="140" cy="80" rx="20" ry="16" fill="white"/>
+              <ellipse cx="100" cy="60" rx="28" ry="20" fill="white"/>
+              <!-- second stroke layer for outline -->
+              <path d="M38,95 Q30,70 52,58 Q68,48 88,52 Q100,44 112,50 Q130,44 148,58 Q170,72 162,95 Q172,118 155,130 Q140,145 120,145 Q100,150 80,145 Q60,145 45,130 Q30,115 38,95Z" fill="white" stroke="#e8d5b0" stroke-width="2"/>
+              <!-- yolk -->
+              <circle cx="100" cy="95" r="28" fill="#fbbf24"/>
+              <circle cx="100" cy="95" r="24" fill="#f59e0b"/>
+              <!-- sheen on yolk -->
+              <ellipse cx="92" cy="84" rx="7" ry="5" fill="white" opacity="0.35" transform="rotate(-20,92,84)"/>
+              <!-- smiley face on yolk -->
+              <circle cx="91" cy="91" r="3" fill="#92400e"/>
+              <circle cx="109" cy="91" r="3" fill="#92400e"/>
+              <!-- smile -->
+              <path d="M88,102 Q100,112 112,102" fill="none" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- rosy cheeks -->
+              <ellipse cx="83" cy="101" rx="5" ry="3" fill="#ffb3b3" opacity="0.6"/>
+              <ellipse cx="117" cy="101" rx="5" ry="3" fill="#ffb3b3" opacity="0.6"/>
+              <!-- small hearts floating -->
+              <text x="32" y="55" font-size="14" opacity="0.5">♡</text>
+              <text x="150" y="50" font-size="11" opacity="0.4">♡</text>
+              <text x="160" y="135" font-size="10" opacity="0.3">♡</text>
+            </svg>
+          </div>
+          <div class="cell-back">
+            <span class="cell-emoji" aria-hidden="true">✉️</span>
+            <span class="cell-label">say hi ♡</span>
+            <span class="cell-sub">let's connect!</span>
+          </div>
+        </div>
       </button>
 
     </div>
@@ -78,7 +298,7 @@
     </div>
   </div>
 
-  <p class="pg-hint">click any cell — the chopsticks will pick it up ✦</p>
+  <p class="pg-hint">hover to peek · click to open ✦</p>
 
   <footer>
     <p>made with ♡ &amp; lots of matcha · © <span id="year"></span> michelle mah</p>
