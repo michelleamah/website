@@ -232,12 +232,25 @@ const SECTION_CONTENT = {
       <span class="modal-emoji">👋</span>
       <h2>about me</h2>
     </div>
+    <div class="about-modal-hero">
+      <div class="about-modal-photo">
+        <img src="assets/profilepic.jpeg" alt="michelle mah" />
+      </div>
+      <div class="about-modal-info">
+        <h3>michelle mah</h3>
+        <p class="about-modal-role">m.s. software management @ carnegie mellon</p>
+        <p class="about-modal-tag">solutions engineer · sf bay area · seeking summer 2027 internships</p>
+        <div class="hero-cta-row">
+          <a href="assets/Michelle-Mah-Resume.pdf" class="btn btn-primary" download>resume</a>
+          <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener" class="btn btn-ghost">linkedin</a>
+          <a href="https://github.com/michelleamah" target="_blank" rel="noopener" class="btn btn-ghost">github</a>
+        </div>
+      </div>
+    </div>
     <div class="card about-card">
-      <p>Hi, I'm <b>Michelle</b>! 👋</p>
       <p>A tech enthusiast with a business mindset — I graduated from <b>Queen's University</b> with a degree in Commerce, and I'm currently studying at <b>Carnegie Mellon</b> for my M.S. in Software Management.</p>
-      <p>I'm passionate about the intersection of technology and business — most recently as a <b>Solutions Engineer</b>, translating complex product capabilities into real customer value. Now at <b>CMU</b> pursuing my M.S. in Software Management, I'm increasingly drawn to <b>product</b> — defining what gets built, for whom, and why.</p>
+      <p>I'm passionate about the intersection of technology and business — most recently as a <b>Solutions Engineer</b>, translating complex product capabilities into real customer value. Now at CMU, I'm increasingly drawn to <b>product</b> — defining what gets built, for whom, and why.</p>
       <p>When I'm not working, you'll find me hunting down the next great restaurant on Beli, experimenting in the kitchen, or soaking up the sun ☀️</p>
-      <p>✉️ <a href="mailto:michelleannabelmah@gmail.com">michelleannabelmah@gmail.com</a> — let's connect!</p>
     </div>
   `,
   currently: `
@@ -415,23 +428,26 @@ const SECTION_CONTENT = {
   contact: `
     <div class="modal-header">
       <span class="modal-emoji">✉️</span>
-      <h2>say hi</h2>
+      <h2>contact</h2>
     </div>
-    <p style="color: var(--muted); margin-bottom: 1.5rem;">i'd love to chat about roles in solutions engineering, product management, or anything at the intersection of technology and real user impact! :)</p>
-    <div class="contact-buttons">
-      <a href="mailto:michelleannabelmah@gmail.com" class="btn btn-primary">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        email me
-      </a>
-      <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener" class="btn btn-ghost">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        linkedin
-      </a>
-      <a href="https://github.com/michelleamah" target="_blank" rel="noopener" class="btn btn-ghost">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-        github
-      </a>
+    <div class="contact-table">
+      <div class="contact-row">
+        <span class="contact-label">linkedin</span>
+        <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener" class="contact-link">michelleamah →</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">github</span>
+        <a href="https://github.com/michelleamah" target="_blank" rel="noopener" class="contact-link">@michelleamah →</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">email</span>
+        <a href="mailto:michelleannabelmah@gmail.com" class="contact-value">michelleannabelmah@gmail.com</a>
+      </div>
     </div>
+    <div class="contact-cta">
+      currently seeking summer 2027 internships ✦
+    </div>
+    <p class="contact-blurb">i'd love to chat about roles in solutions engineering, product management, or anything at the intersection of technology and real user impact!</p>
   `,
 };
 
@@ -449,14 +465,15 @@ function initBento() {
   });
 }
 
-function openCell(event, cell) {
+function openCell(cell) {
   const section = cell.dataset.section;
-  const emojiEl = cell.querySelector('.cell-emoji');
-  const emoji = emojiEl ? emojiEl.textContent : '';
+  // hero cell uses 🍱 emoji as its pickup emoji
+  const emojiEl = cell.querySelector('.cell-emoji') || cell.querySelector('.hero-intro-emoji');
+  const emoji = emojiEl ? emojiEl.textContent.trim() : '';
 
   cell.classList.add('picked');
 
-  animateCursorPickup(event.clientX, event.clientY, emoji, () => {
+  animateChopsticksTo(cell, emoji, () => {
     cell.classList.remove('picked');
     showBentoModal(section);
   });
@@ -466,42 +483,59 @@ function openSection(section) {
   showBentoModal(section);
 }
 
-function animateCursorPickup(x, y, emoji, callback) {
-  const floater = document.getElementById('chopEmoji');
+function animateChopsticksTo(cell, emoji, callback) {
+  const layer   = document.getElementById('chopLayer');
+  const emojiEl = document.getElementById('chopEmoji');
+  const chopA   = document.getElementById('chopA');
+  const chopB   = document.getElementById('chopB');
 
-  // place emoji at cursor tip, invisible and scaled down
-  floater.style.transition = 'none';
-  floater.style.left   = (x - 14) + 'px';
-  floater.style.top    = y + 'px';
-  floater.style.transform = 'scale(0.4) translateY(0px)';
-  floater.style.opacity = '0';
-  floater.textContent  = emoji;
+  const rect = cell.getBoundingClientRect();
+  const cx = rect.left + rect.width  / 2;
+  const cy = rect.top  + rect.height / 2;
+
+  layer.style.display = 'block';
+
+  // snap chopsticks above the cell (no transition)
+  chopA.style.transition = 'none';
+  chopB.style.transition = 'none';
+  chopA.style.left = (cx - 14) + 'px';  chopA.style.top = (cy - 90) + 'px';
+  chopB.style.left = (cx +  6) + 'px';  chopB.style.top = (cy - 90) + 'px';
+  chopA.style.transform = 'rotate(-14deg)';
+  chopB.style.transform = 'rotate(14deg)';
+
+  emojiEl.textContent = emoji;
+  emojiEl.style.left = (cx - 14) + 'px';
+  emojiEl.style.top  = cy + 'px';
+  emojiEl.style.opacity = '0';
 
   requestAnimationFrame(() => {
-    // pop in with a slight bounce
-    floater.style.transition = 'opacity 0.12s ease, transform 0.22s cubic-bezier(.34,1.56,.64,1)';
-    requestAnimationFrame(() => {
-      floater.style.opacity   = '1';
-      floater.style.transform = 'scale(1.2) translateY(0px)';
-    });
+    chopA.style.transition = '';
+    chopB.style.transition = '';
 
-    // settle scale, then float upward
+    // close tips around emoji
     setTimeout(() => {
-      floater.style.transition = 'transform 0.32s cubic-bezier(.25,.46,.45,.94)';
-      floater.style.transform  = 'scale(1) translateY(-52px)';
+      emojiEl.style.opacity = '1';
+      chopA.style.transform = 'rotate(-4deg)';
+      chopB.style.transform = 'rotate(4deg)';
+    }, 60);
+
+    // lift up
+    setTimeout(() => {
+      emojiEl.style.top = (cy - 60) + 'px';
     }, 200);
 
     // fade out
     setTimeout(() => {
-      floater.style.transition = 'opacity 0.18s ease';
-      floater.style.opacity    = '0';
-    }, 420);
+      emojiEl.style.opacity = '0';
+    }, 390);
 
-    // done
+    // reset and open modal
     setTimeout(() => {
-      floater.style.transform = 'scale(0.4) translateY(0px)';
+      layer.style.display = 'none';
+      chopA.style.transform = 'rotate(-14deg)';
+      chopB.style.transform = 'rotate(14deg)';
       callback();
-    }, 560);
+    }, 530);
   });
 }
 
