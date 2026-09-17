@@ -36,7 +36,7 @@ const SECTIONS = {
       <div class="t-item"><div class="t-dot"></div><div class="t-card">
         <div class="t-head"><h3>Queen's University</h3><span class="t-date">sep 2019 – jun 2023</span></div>
         <p class="t-role">Bachelor of Commerce · Smith School of Business</p>
-        <div class="t-body"><p>Graduated with first class honours — Dean's Honour List all years. Queen's University Excellence Scholarship (94% avg). Exchange at Yonsei University, Seoul 🇰🇷 · winter 2022.</p></div>
+        <div class="t-body"><p>Graduated with first class honours — Dean's Honour List all years. Queen's University Excellence Scholarship (94% avg). Admitted to the Smith School of Business with a 7% acceptance rate.</p><p>Exchange at Yonsei University, Seoul 🇰🇷 · winter 2022.</p></div>
       </div></div>
     </div>`,
 
@@ -83,7 +83,7 @@ const SECTIONS = {
       <div class="proj-card">
         <h3>website</h3>
         <div class="lang-chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
-        <p>This portfolio — designed and built from scratch. No frameworks, no templates.</p>
+        <p>The one you're on right now!</p>
         <a class="proj-link" href="https://github.com/michelleamah" target="_blank" rel="noopener">view on github →</a>
       </div>
       <div class="proj-card">
