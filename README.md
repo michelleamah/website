@@ -1,6 +1,6 @@
 # Michelle Mah — Personal Portfolio
 
-Personal portfolio site for [michelleamah.com](https://michelleamah.com), built with plain HTML, CSS, and JavaScript. No build tools or dependencies.
+Personal portfolio site, built with plain HTML, CSS, and JavaScript. No build tools or dependencies.
 
 ## File Structure
 
