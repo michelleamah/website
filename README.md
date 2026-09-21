@@ -1,38 +1,24 @@
-# Michelle Mah — Personal Portfolio
+# michelleamah.com
 
-Personal portfolio site, built with plain HTML, CSS, and JavaScript. No build tools or dependencies.
+Personal portfolio, styled as a bento box. Plain HTML, CSS, and JavaScript — no build step, no dependencies.
 
-## File Structure
+## Structure
 
 ```
-/
-├── index.html      — all content and markup
-├── styles.css      — all styling, theming, and layout
-├── script.js       — theme toggle, music player, GitHub project fetch
-└── assets/         — images, resume PDF, and audio file
+index.html      bento grid: the five cells and their front-face text
+styles.css      all styling (palette tokens at the top in :root)
+script.js       modal content for each cell + the chopstick animation
+assets/         profilepic.jpeg, Michelle-Mah-Resume.pdf
+CNAME           custom domain for GitHub Pages
 ```
 
-## Editing Content
+## Editing
 
-| Section | Location in index.html |
-| --- | --- |
-| Name, tagline, hero text | `#home` section |
-| About me bio and currently card | `#about` section |
-| Education | `#education` section |
-| Work experience | `#experience` section |
-| Skills | `#skills` section |
-| Contact | `#contact` section |
+- **Cell fronts** (labels, subtitles, proof points): `index.html`
+- **Modal content** (about, education, experience, projects, contact): the `SECTIONS` object at the top of `script.js`
+- **Colors and fonts**: `:root` variables at the top of `styles.css`
+- **Resume**: replace `assets/Michelle-Mah-Resume.pdf`. Copy the file in Finder — pasting a PDF through a text editor corrupts it.
 
-**Colors and fonts** are defined as CSS variables at the top of `styles.css` (`:root` for light mode, `[data-theme="dark"]` for dark mode).
+## Deploying
 
-**GitHub projects** are auto-fetched from the GitHub API. The username and pinned repo list are configured at the top of `script.js`.
-
-## Assets
-
-- **Profile photo** — replace `assets/profilepic.jpeg`
-- **Resume** — replace `assets/resume.pdf`
-- **Background music** — replace `assets/music.mp3`
-
-## Deployment
-
-The site is deployed via GitHub Pages from the `main` branch with a custom domain configured via `CNAME`. Pushing to `main` triggers an automatic deploy.
+Push to `main`; GitHub Pages deploys automatically. The site sits behind Cloudflare, which caches `styles.css` and `script.js` aggressively — after editing either one, bump the `?v=` number on its `<link>`/`<script>` tag in `index.html` so browsers fetch the new file.
