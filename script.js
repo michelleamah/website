@@ -8,7 +8,7 @@ const SECTIONS = {
         <p class="role">m.s. software management @ carnegie mellon</p>
         <p class="tag">solutions engineer · sf bay area · seeking summer 2027 internships</p>
         <div class="about-links">
-          <a href="assets/Michelle-Mah-Resume.pdf" target="_blank" rel="noopener">resume ↓</a>
+          <a href="assets/Michelle-Mah-Resume.pdf?v=2" target="_blank" rel="noopener">resume ↓</a>
           <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener">linkedin →</a>
           <a href="https://github.com/michelleamah" target="_blank" rel="noopener">github →</a>
         </div>
