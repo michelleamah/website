@@ -1,21 +1,21 @@
 # michelleamah.com
 
-Personal portfolio, styled as a bento box. Plain HTML, CSS, and JavaScript — no build step, no dependencies.
+Personal portfolio — a single-page bento grid of stats, experience, education, and projects. Plain HTML, CSS, and JavaScript; no build step, no dependencies.
 
 ## Structure
 
 ```
-index.html      bento grid: the five cells and their front-face text
-styles.css      all styling (palette tokens at the top in :root)
-script.js       modal content for each cell + the chopstick animation
+index.html      all content: hero, stat tiles, experience, education, toolkit, projects, contact
+styles.css      all styling (palette tokens at the top in :root; grid spans under "bento grid")
+script.js       footer year + count-up animation for the stat tiles
 assets/         profilepic.jpeg, Michelle-Mah-Resume.pdf
 CNAME           custom domain for GitHub Pages
 ```
 
 ## Editing
 
-- **Cell fronts** (labels, subtitles, proof points): `index.html`
-- **Modal content** (about, education, experience, projects, contact): the `SECTIONS` object at the top of `script.js`
+- **Everything on the page** lives in `index.html`, one `<section class="card">` per block
+- **Stat tiles**: the `data-count` / `data-prefix` / `data-suffix` attributes on `.num` drive the count-up
 - **Colors and fonts**: `:root` variables at the top of `styles.css`
 - **Resume**: replace `assets/Michelle-Mah-Resume.pdf`. Copy the file in Finder — pasting a PDF through a text editor corrupts it.
 
