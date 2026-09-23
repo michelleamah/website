@@ -4,162 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>michelle mah</title>
-  <meta name="description" content="Michelle Mah — M.S. Software Management at Carnegie Mellon, former Solutions Engineer. Seeking summer 2027 product management and solutions engineering internships." />
-  <meta property="og:title" content="Michelle Mah — product & solutions" />
-  <meta property="og:description" content="M.S. Software Management @ Carnegie Mellon · ex-Solutions Engineer · $4.7M expansion ACV · #1 GTM team in North America" />
+  <meta name="description" content="Michelle Mah — solutions engineer & master's student at Carnegie Mellon. Portfolio, projects & experience." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍱</text></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
 
-<header class="top">
-  <a class="wordmark" href="#">michelle mah</a>
-  <nav class="links" aria-label="Links">
-    <a href="assets/Michelle-Mah-Resume.pdf?v=2" target="_blank" rel="noopener" class="btn">resume ↓</a>
+  <!-- modal overlay -->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="closeBtn" aria-label="Close">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- animated chopstick layer -->
+  <div class="chop-layer" id="chopLayer">
+    <div class="stick" id="stickA"></div>
+    <div class="stick" id="stickB"></div>
+    <span class="chop-float" id="chopFloat"></span>
+  </div>
+
+  <p class="pg-title">michelle's bento ♡</p>
+  <nav class="pg-links" aria-label="Links">
+    <a href="assets/Michelle-Mah-Resume.pdf?v=2" target="_blank" rel="noopener">resume</a>
+    <span aria-hidden="true">·</span>
     <a href="https://www.linkedin.com/in/michelleamah/" target="_blank" rel="noopener">linkedin</a>
+    <span aria-hidden="true">·</span>
     <a href="https://github.com/michelleamah" target="_blank" rel="noopener">github</a>
+    <span aria-hidden="true">·</span>
     <a href="mailto:michelleannabelmah@gmail.com">email</a>
   </nav>
-</header>
 
-<main class="grid">
+  <div class="bento-layout">
+    <div class="bento">
 
-  <!-- hero -->
-  <section class="card hero">
-    <img class="photo" src="assets/profilepic.jpeg" alt="Michelle Mah" />
-    <div class="hero-text">
-      <p class="eyebrow">product · solutions engineering · sf bay area</p>
-      <h1>Hi, I'm Michelle. I turn technical discovery into products people actually adopt.</h1>
-      <p class="lede">M.S. Software Management at <strong>Carnegie Mellon</strong>. Previously a Solutions Engineer at Organimi and a GTM Team Lead at <strong>Salesforce</strong>, where I led the #1 team in North America.</p>
-      <p class="seeking"><span class="dot"></span>seeking summer 2027 PM &amp; solutions engineering internships</p>
+      <button class="cell cell-hero" onclick="openCell(this,'about','🍱')">
+        <span class="hero-emoji" aria-hidden="true">🍱</span>
+        <div>
+          <p class="hero-name">hi, i'm michelle</p>
+          <p class="hero-sub">m.s. software management @ carnegie mellon · solutions engineer · prev salesforce · sf bay area</p>
+          <p class="hero-cta">seeking summer 2027 product management &amp; solutions engineering internships ✦</p>
+        </div>
+      </button>
+
+      <button class="cell cell-edu" onclick="openCell(this,'education','🎓')">
+        <span class="cell-emoji" aria-hidden="true">🎓</span>
+        <span class="cell-label">education</span>
+        <span class="cell-sub">cmu · queen's · brainstation</span>
+        <span class="cell-stat">first-class honours · 7% admit smith commerce</span>
+      </button>
+
+      <button class="cell cell-exp" onclick="openCell(this,'experience','💼')">
+        <span class="cell-emoji" aria-hidden="true">💼</span>
+        <span class="cell-label">experience</span>
+        <span class="cell-sub">organimi · salesforce · daebak</span>
+        <span class="cell-stat">$4.7m expansion acv · #1 gtm team in north america</span>
+      </button>
+
+      <button class="cell cell-proj" onclick="openCell(this,'projects','🛠️')">
+        <span class="cell-emoji" aria-hidden="true">🛠️</span>
+        <span class="cell-label">projects</span>
+        <span class="cell-sub">bookmate · website · bandsite</span>
+        <span class="cell-stat">react · node · mysql · vanilla js</span>
+      </button>
+
+      <button class="cell cell-contact" onclick="openCell(this,'contact','✉️')">
+        <span class="cell-emoji" aria-hidden="true">✉️</span>
+        <span class="cell-label">say hi ♡</span>
+        <span class="cell-sub">let's connect!</span>
+        <span class="cell-stat">michelleannabelmah@gmail.com</span>
+      </button>
+
     </div>
-  </section>
 
-  <!-- stats -->
-  <section class="card stat">
-    <p class="num" data-count="4.7" data-prefix="$" data-suffix="M">$4.7M</p>
-    <p class="stat-label">expansion ACV identified</p>
-    <p class="stat-note">enterprise pharma accounts · salesforce</p>
-  </section>
-  <section class="card stat">
-    <p class="num">#1</p>
-    <p class="stat-label">GTM team in north america</p>
-    <p class="stat-note">led a team of 8 after promotion · salesforce</p>
-  </section>
-  <section class="card stat">
-    <p class="num" data-count="100" data-suffix="+">100+</p>
-    <p class="stat-label">technical discovery calls</p>
-    <p class="stat-note">enterprise → smb · organimi</p>
-  </section>
-  <section class="card stat">
-    <p class="num" data-count="15" data-suffix="%">15%</p>
-    <p class="stat-label">less troubleshooting time</p>
-    <p class="stat-note">root-cause framework from 100+ tickets / mo</p>
-  </section>
+    <!-- chopstick tray compartment -->
+    <div class="chop-tray" id="chopTray">
+      <div class="tray-inner">
+        <div class="tray-stick"></div>
+        <div class="tray-stick"></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- experience -->
-  <section class="card experience">
-    <h2>experience</h2>
-    <ol class="timeline">
-      <li>
-        <div class="row"><h3>Organimi <span>Solutions Engineer</span></h3><time>mar – aug 2026</time></div>
-        <ul>
-          <li>Led 100+ technical discovery calls across enterprise, commercial and SMB accounts, scoping REST API and webhook integrations and designing custom data schemas.</li>
-          <li>Owned a global search feature end-to-end: user research → requirements → scope with product &amp; engineering → launch and customer webinar.</li>
-          <li>Cut manual troubleshooting time 15% with a root-cause diagnostic framework built from 100+ monthly Zendesk tickets and LogRocket sessions.</li>
-        </ul>
-      </li>
-      <li>
-        <div class="row"><h3>Salesforce <span>GTM, Team Lead</span></h3><time>jun 2024 – mar 2026</time></div>
-        <ul>
-          <li>Identified $4.7M in expansion ACV for pharma accounts through technical qualification with enterprise AEs and usage-signal analysis.</li>
-          <li>Promoted to Team Lead in Aug 2025; led a team of 8 to the #1 GTM team in North America, building internal KPI tools and strategy cadences.</li>
-          <li>Flagged churn risk across a regulated enterprise portfolio with data-driven health monitoring, protecting renewal revenue.</li>
-        </ul>
-      </li>
-      <li>
-        <div class="row"><h3>The Daebak Company <span>Product Operations Analyst</span></h3><time>jun 2023 – mar 2024</time></div>
-        <ul>
-          <li>Drove a 10% lift in website conversion by prioritizing fixes surfaced through SEO analysis and customer research.</li>
-          <li>Coordinated cross-functional workflows between product, marketing and operations.</li>
-        </ul>
-      </li>
-    </ol>
-    <a class="card-foot" href="assets/Michelle-Mah-Resume.pdf?v=2" target="_blank" rel="noopener">full resume with coursework &amp; certifications <span>↓</span></a>
-  </section>
+  <p class="pg-hint">click any cell — the chopsticks will pick it up ✦</p>
 
-  <!-- education -->
-  <section class="card education">
-    <h2>education</h2>
-    <ol class="timeline compact">
-      <li>
-        <div class="row"><h3>Carnegie Mellon University</h3><time>2026 – 2027</time></div>
-        <p>M.S. Software Management, College of Engineering · STEM-designated</p>
-      </li>
-      <li>
-        <div class="row"><h3>Queen's University, Smith School of Business</h3><time>2019 – 2023</time></div>
-        <p>Bachelor of Commerce · First Class Honours, Dean's List all four years · Excellence Scholarship (94% avg) · 7% admit rate · exchange at Yonsei University, Seoul</p>
-      </li>
-      <li>
-        <div class="row"><h3>BrainStation</h3><time>2024</time></div>
-        <p>Software Engineering Diploma · $16,000 Code to Career scholarship</p>
-      </li>
-    </ol>
-  </section>
+  <footer>
+    <p>made with ♡ &amp; lots of matcha · © <span id="year"></span> michelle mah</p>
+  </footer>
 
-  <!-- skills -->
-  <section class="card skills">
-    <h2>toolkit</h2>
-    <dl>
-      <dt>product &amp; solutions</dt>
-      <dd>technical discovery · product requirements · solution design · customer research · roadmap prioritization</dd>
-      <dt>technical</dt>
-      <dd>JavaScript · TypeScript · React · Node.js · Python · SQL · REST APIs · webhooks</dd>
-      <dt>tools &amp; analytics</dt>
-      <dd>Salesforce CRM · Postman · Zendesk · LogRocket · Mixpanel · Tableau · Snowflake · BigQuery</dd>
-      <dt>certification</dt>
-      <dd>Salesforce Certified Administrator · feb 2026</dd>
-    </dl>
-  </section>
-
-  <!-- projects -->
-  <section class="card projects">
-    <h2>projects</h2>
-    <ul class="proj-list">
-      <li>
-        <a href="https://github.com/michelleamah/bookmate" target="_blank" rel="noopener">
-          <h3>bookmate <span>↗</span></h3>
-          <p>Tinder-style book matching app. Full-stack BrainStation capstone with live API integration.</p>
-          <p class="stack">React · Node.js · Express · MySQL</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/michelleamah/website" target="_blank" rel="noopener">
-          <h3>this site <span>↗</span></h3>
-          <p>Hand-built portfolio. No frameworks, no build step.</p>
-          <p class="stack">HTML · CSS · JavaScript</p>
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- contact -->
-  <section class="card contact">
-    <h2>let's talk</h2>
-    <p>I'd love to chat about product management, solutions engineering, or anything at the intersection of technology and real user impact.</p>
-    <a class="btn big" href="mailto:michelleannabelmah@gmail.com">michelleannabelmah@gmail.com</a>
-    <p class="fine">TN visa eligible · open to relocation</p>
-  </section>
-
-</main>
-
-<footer>© <span id="year"></span> michelle mah · made with lots of matcha 🍵</footer>
-
-<script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
